@@ -1,0 +1,61 @@
+html{
+    font-size: 62.5%;
+}
+:root{
+    --perFontFam : "Vivaldi";
+    --perFontSize : 3.5rem;
+}
+
+#about-pretitle{
+    font-family: var(--perFontFam);
+    font-size: var(--perFontSize);
+}
+#about-title{
+    margin-top: -30px;
+    font-size: 4rem;
+    margin-bottom: 50px;
+}
+#about-img{
+    position: relative;
+}
+#about-img img{
+    position: absolute;
+    right: -15%;
+    z-index: -1;
+}
+#about-desc{
+    background-color: rgba(255, 206, 10, 0.726);
+    width: 713px;
+    height: 365px;
+    padding: 85px 50px 90px 30px;
+    text-align: center;
+}
+#about-desc h2{
+    font-size: 3.9rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+#about-desc p{
+    font-size: 2.3rem;
+    color: #4B4B4B;
+}
+#about-cards{
+    margin-top: 17.5rem;
+    max-width: 1350px;
+}
+#about-cards img{
+    min-width: 200px;
+    max-width: 450px;
+    min-height: 100px;
+}
+#about-cards h3{
+    font-size: 3rem;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+}
+#about-cards p{
+    font-size: 2.4rem;
+    color: #8E8E8E;
+    padding-left: 20px;
+    padding-right: 20px;
+}
