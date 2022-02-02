@@ -15,6 +15,18 @@
     <title>Balaji Restaurant</title>
 </head>
 
+<script>
+    function chn(x) {
+        if(x==1){
+            let imgStr = document.getElementById('comm-img').src;
+            let nextNo = Number.parseInt(imgStr[30])+1;
+            imgStr[30] = String.toString(nextNo);
+            // document.getElementById('comm-img').src = imgStrNext;
+            console.log(imgStr + nextNo);
+        }
+    }
+</script>
+
 <body>
 
     <!-- About Section -->
@@ -113,20 +125,22 @@
     </section>
 
     <!-- Comment Section -->
-    <section id="comments">
-        <div id="back-btn-block">
-            <div id="back-btn"></div>
-        </div>
-        <div id="comm-block" class="d-flex">
-            <img src="./img/comm1.png">
-            <div>
-                <img src="./img/Quotas.png">
-                <p id="comm-text">I tried live Khazana with mint Its and was awesome</p>
-                <p id="comm-au">Sweta Tripathi</p>
+    <section style="height: 83rem;">
+        <div id="comments" class="d-flex">
+            <div id="back-btn-block" class="position-relative">
+                <div id="back-btn" class="position-absolute top-50 start-50" onclick="chn(-1)"></div>
             </div>
-        </div>
-        <div id="forward-btn-block">
-            <div id="forward-btn"></div>
+            <div id="comm-block" class="d-flex">
+                <img id="comm-img" src="./img/comm1.png" class="img-fluid">
+                <div id="comm-dis">
+                    <img src="./img/Quotas.png">
+                    <p id="comm-text">I tried live Khazana with mint Its and was awesome</p>
+                    <p id="comm-au">Sweta Tripathi</p>
+                </div>
+            </div>
+            <div id="forward-btn-block" class="position-relative">
+                <div id="forward-btn" class="position-absolute top-50 start-50" onclick="chn(1)"></div>
+            </div>
         </div>
     </section>
 
@@ -167,7 +181,7 @@
                 <div id="loc"></div>
             </div>
         </div>
-        
+
     </section>
 
 

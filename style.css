@@ -178,8 +178,76 @@ html{
 
 /* Comments Section CSS */
 #comments{
-    width: auto;
+    width: 122.5rem;
     margin: auto;
+    padding-top: 15rem;
+    gap: 2.5rem;
+}
+#back-btn-block{
+    width: 11.5rem;
+    height: 49.5rem;
+    background-image: linear-gradient(
+        rgba(49, 49, 49, 0.8),
+        rgba(49, 49, 49, 0.8)
+      ),
+      url(./img/comm3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#forward-btn-block{
+    width: 11.5rem;
+    height: 49.5rem;
+    background-image: linear-gradient(
+        rgba(49, 49, 49, 0.8),
+        rgba(49, 49, 49, 0.8)
+      ),
+      url(./img/comm2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#back-btn,#forward-btn{
+    width: 5rem;
+    height: 5rem;
+    border: 5px solid white;
+    margin: auto;
+    cursor: pointer;
+}
+#back-btn{
+    border-right: transparent;
+    border-bottom: transparent;
+    transform: rotate(-45deg);
+}
+#forward-btn{
+    border-left: transparent;
+    border-bottom: transparent;
+    transform: rotate(45deg);
+    
+}
+#comm-block{
+    gap: 3.5rem;
+}
+#comm-dis{
+    width: 58.5rem;
+    align-self: center;
+}
+#comm-text{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-right: 13rem;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+#comm-au{
+    font-size: 2.5rem;
+    color: #5B79DB;
+}
+@media (max-width:1200px) {
+    #comments{
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* Contact us section CSS */
