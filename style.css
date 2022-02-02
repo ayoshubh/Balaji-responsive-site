@@ -6,6 +6,8 @@ html{
     --perFontSize : 3.5rem;
 }
 
+
+/* About CSS */
 #about-pretitle{
     font-family: var(--perFontFam);
     font-size: var(--perFontSize);
@@ -42,6 +44,7 @@ html{
 #about-cards{
     margin-top: 17.5rem;
     max-width: 1350px;
+    margin-bottom: 15rem;
 }
 #about-cards img{
     min-width: 200px;
@@ -58,4 +61,151 @@ html{
     color: #8E8E8E;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+/* Recipe CSS */
+#recipe{
+    background-color: #272727;
+    color: white;
+    text-align: center;
+}
+#recipe-pretext{
+    font-size: var(--perFontSize);
+    font-family: var(--perFontFam);
+    margin-top: 7rem;
+}
+#recipe-title{
+    margin-top: -20px;
+    font-size: 4rem;
+    margin-bottom: 7rem;
+}
+.image-group{
+    position: relative;
+    height: 250px;
+    margin-bottom: 5rem;
+}
+.imgItem{
+    height: 200px;
+    width: 200px;
+    border: 10px solid white;
+    border-radius: 50%;
+}
+#img1{
+    position: absolute;
+    background: url("./img/about1.png");
+    z-index: 1;
+    top: 3rem;
+    left: 30%;
+}
+#img2{
+    position: absolute;
+    background: url("./img/about2.png");
+    z-index: 2;
+    top: 3rem;
+    left: 37%;
+}
+#img3{
+    position: absolute;
+    background: url("./img/about3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 3;
+    border-width: 13px;
+    width: 250px;
+    height: 250px;
+}
+#img4{
+    position: absolute;
+    background: url("./img/about2.png");
+    z-index: 2;
+    top: 3rem;
+    right:37%;
+}
+#img5{
+    position: absolute;
+    background: url("./img/about1.png");
+    z-index: 1;
+    top: 3rem;
+    right: 30%;
+}
+#recipe-name{
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+#recipe-desc{
+    font-size: 2.1rem;
+    color: #8E8E8E;
+    margin-bottom: 8rem;
+}
+
+/* Timing CSS */
+#timing{
+    height: auto;
+    width: 100%;
+    padding-bottom: 6rem;
+    background-image: linear-gradient(
+        rgba(255, 255, 0, 0.8),
+        rgba(255, 255, 0, 0.8)
+      ),
+      url(./img/about2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#hang-frame{
+    width: 35rem;
+    height: 19rem;
+    background: linear-gradient(black,rgb(65, 65, 65));
+    margin: auto;
+    color: white;
+    border: 10px solid white;
+    transform: rotate(-5deg);
+}
+#hang-frame h3{
+    text-align: center;
+    font-family: "Freestyle Script";
+    font-size: 3rem;
+    font-weight: bold;
+    padding-top: 2rem;
+}
+#hang-frame table{
+    width: 30rem;
+    margin-left: 2rem;
+    font-size: 1.7rem;
+    margin-top: 3rem;
+}
+
+/* Comments Section CSS */
+#comments{
+    width: auto;
+    margin: auto;
+}
+
+/* Contact us section CSS */
+#contact{
+    background-image: linear-gradient(
+        rgba(87, 87, 87, 0.8),
+        rgba(87, 87, 87, 0.8)
+      ),
+      url(./img/bgmap.png);
+}
+#contact-box{
+    position: relative;
+    background-color: #EDBB0C;
+    max-width: 56.5rem;
+    margin: auto;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    font-size: 2rem;
+    color: #4B4B4B;
+}
+#loc{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #D3D002;
+    bottom: -35px;
+    left: 50%;
 }
