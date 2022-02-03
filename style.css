@@ -27,8 +27,6 @@ html{
 }
 #about-desc{
     background-color: rgba(255, 206, 10, 0.726);
-    /* width: 713px;
-    height: 365px; */
     padding: 85px 50px 90px 30px;
     text-align: center;
 }
@@ -80,52 +78,31 @@ html{
 }
 .image-group{
     position: relative;
-    height: 250px;
+    height: auto;
     margin-bottom: 5rem;
 }
-.imgItem{
-    height: 200px;
-    width: 200px;
-    border: 10px solid white;
-    border-radius: 50%;
-}
+
 #img1{
     position: absolute;
-    background: url("./img/about1.png");
     z-index: 1;
-    top: 3rem;
     left: 30%;
 }
 #img2{
     position: absolute;
-    background: url("./img/about2.png");
     z-index: 2;
-    top: 3rem;
     left: 37%;
 }
 #img3{
-    position: absolute;
-    background: url("./img/about3.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     z-index: 3;
-    border-width: 13px;
-    width: 250px;
-    height: 250px;
 }
 #img4{
     position: absolute;
-    background: url("./img/about2.png");
     z-index: 2;
-    top: 3rem;
     right:37%;
 }
 #img5{
     position: absolute;
-    background: url("./img/about1.png");
     z-index: 1;
-    top: 3rem;
     right: 30%;
 }
 #recipe-name{
@@ -143,14 +120,15 @@ html{
     height: auto;
     width: 100%;
     padding-bottom: 6rem;
-    background-image: linear-gradient(
-        rgba(255, 255, 0, 0.8),
-        rgba(255, 255, 0, 0.8)
-      ),
-      url(./img/about2.png);
+    background: url(./img/Group\ 45.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+#hang-thread{
+  padding-top: 5rem;
+  width: 24.5rem;
+  margin: auto;
 }
 #hang-frame{
     width: 35rem;
@@ -160,6 +138,7 @@ html{
     color: white;
     border: 10px solid white;
     transform: rotate(-5deg);
+    margin-top: -1rem;
 }
 #hang-frame h3{
     text-align: center;
@@ -217,11 +196,15 @@ html{
     border-right: transparent;
     border-bottom: transparent;
     transform: rotate(-45deg);
+    top: 45%;
+    left: 40%;
 }
 #forward-btn{
     border-left: transparent;
     border-bottom: transparent;
     transform: rotate(45deg);
+    top: 45%;
+    left: 20%;
     
 }
 #comm-block{
