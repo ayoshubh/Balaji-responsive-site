@@ -377,13 +377,20 @@ html {
     #back-btn, #forward-btn {
         border-width: 2px;
     }
+
+    #forward-btn {
+        left: 0;
+    }
 }
 
 /* Contact us section CSS */
 #contact {
-    background-image: linear-gradient(rgba(87, 87, 87, 0.8),
-            rgba(87, 87, 87, 0.8)),
+    background-image: linear-gradient(rgba(49, 49, 49, 0.8),
+            rgba(49, 49, 49, 0.8)),
         url(./img/bgmap.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #contact-box {
