@@ -413,3 +413,335 @@ html {
     bottom: -35px;
     left: 50%;
 }
+
+/* ===================================================================================================================================================================== */
+/* *{
+    box-sizing: border-box !important ;
+    margin: 0;
+    padding: 0;
+} */
+
+#navbar {
+    height: 100px;
+}
+
+#navbar li {
+    font-size: small;
+    font-weight: bold;
+}
+
+#imgContainer {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    top: 25px;
+    background-color: black;
+    z-index: 5;
+}
+
+#imgContainer img {
+    position: relative;
+    top: 10px;
+    right: 25px;
+
+
+}
+
+
+
+/* body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none} */
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 2000px;
+    position: relative;
+    /* margin: auto; */
+}
+
+
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.mySlides {
+    height: 600px;
+    /* width: 4000px; */
+    background-image: url("/img/Group 36.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Caption text */
+.mySlides .text {
+    color: white;
+    font-weight: bolder;
+    /* font-size: 15px; */
+    padding: 0px 12px;
+    position: relative;
+    top: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+.mySlides .text p {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #cac9c7;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    position: relative;
+    bottom: -240px;
+    height: 10px;
+    width: 10px;
+    margin: 0px 2px;
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #EDBB0C;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px
+    }
+}
+
+.carousel-button {
+    margin-bottom: 100px;
+}
+
+#footer {
+    position: relative;
+    bottom: px;
+    height: auto;
+    background-color: #EDBB0C;
+}
+
+#imgRow {
+    display: flex;
+    justify-content: center;
+}
+
+#footer img {
+    margin-top: 15px;
+}
+
+#footer .txt {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#footer #line {
+    margin-right: 100px;
+    margin-left: 100px;
+    border-style: solid;
+    border-width: 0.1px;
+    border-color: white;
+}
+
+#footer .child i {
+    font-size: 25px;
+}
+
+
+#header h5 {
+    text-align: center;
+    font-family: 400;
+}
+
+#header h5 .first-letter {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+#header h1 {
+    text-align: center;
+    margin-bottom: 80px;
+    font-weight: 700;
+    text-indent: 20px;
+    letter-spacing: 1.5px;
+    font-size: 40px;
+}
+
+.button {
+    /* box-sizing: border-box; */
+    height: 57px;
+    width: 150px;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    border: 3px solid #EDBB0C;
+    margin-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.button:hover {
+    background-color: #EDBB0C;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#gallery {
+    display: grid;
+    row-gap: 40px;
+    column-gap: 40px;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* gap: 40px 40px; */
+    grid-auto-flow: row;
+    grid-template-areas:
+        "div1 div2 div3 div4"
+        "div1 div5 div6 div7";
+
+    margin-bottom: 100px;
+}
+
+.div1 {
+    grid-area: div1;
+}
+
+.div2 {
+    grid-area: div2;
+}
+
+.div3 {
+    grid-area: div3;
+}
+
+.div4 {
+    grid-area: div4;
+}
+
+.div5 {
+    grid-area: div5;
+}
+
+.div6 {
+    grid-area: div6;
+}
+
+.div7 {
+    grid-area: div7;
+}
+
+
+#strip1 {
+    width: auto;
+    height: auto;
+    background-color: #2e2e2e;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6f6f6f;
+
+    margin-bottom: 0;
+
+}
+
+#strip1 #dfood {
+    color: #f1f1f1;
+}
+
+.order-container {
+    position: relative;
+    top: -85px;
+    z-index: 10;
+
+}
+
+#strip2 {
+    background-color: #EDBB0C;
+    border-right: 1px solid white;
+    padding-right: 15px;
+    padding-top: 30px;
+
+}
+
+#strip2 span {
+    font-size: 15px;
+}
+
+#strip2 #txt {
+    font-size: 1.2rem;
+}
+
+#strip2 .or {
+    border-radius: 50%;
+    position: relative;
+    left: 93px;
+    top: -29px;
+    background-color: #EDBB0C;
+    box-sizing: border-box;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;
+}
+
+#strip3 {
+    background-color: #EDBB0C;
+    padding-left: 15px;
+    width: auto;
+}
+
+#strip3 span {
+    font-size: small;
+}
+
+#strip3 button {
+    margin-left: 10px;
+    margin-right: 50px;
+}
