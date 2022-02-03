@@ -1,59 +1,70 @@
-html{
+html {
     font-size: 62.5%;
 }
-:root{
-    --perFontFam : "Vivaldi";
-    --perFontSize : 3.5rem;
+
+:root {
+    --perFontFam: "Vivaldi";
+    --perFontSize: 3.5rem;
 }
 
 
 /* About CSS */
-#about-pretitle{
+#about-pretitle {
     font-family: var(--perFontFam);
     font-size: var(--perFontSize);
 }
-#about-title{
+
+#about-title {
     margin-top: -30px;
     font-size: 4rem;
     margin-bottom: 50px;
 }
-#about-img{
+
+#about-img {
     position: relative;
 }
-#about-img img{
+
+#about-img img {
     position: absolute;
     right: -15%;
     z-index: -1;
 }
-#about-desc{
+
+#about-desc {
     background-color: rgba(255, 206, 10, 0.726);
     padding: 85px 50px 90px 30px;
     text-align: center;
 }
-#about-desc h2{
+
+#about-desc h2 {
     font-size: 3.9rem;
     font-weight: 400;
     margin-bottom: 20px;
 }
-#about-desc p{
+
+#about-desc p {
     font-size: 2.3rem;
     color: #4B4B4B;
 }
-#about-cards{
+
+#about-cards {
     margin-top: 17.5rem;
     max-width: 1350px;
     margin-bottom: 15rem;
 }
-#about-cards img{
+
+#about-cards img {
     min-width: 200px;
     min-height: 100px;
 }
-#about-cards h3{
+
+#about-cards h3 {
     font-size: 3rem;
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
 }
-#about-cards p{
+
+#about-cards p {
     font-size: 2.4rem;
     color: #8E8E8E;
     padding-left: 20px;
@@ -61,22 +72,25 @@ html{
 }
 
 /* Recipe CSS */
-#recipe{
+#recipe {
     background-color: #272727;
     color: white;
     text-align: center;
 }
-#recipe-pretext{
+
+#recipe-pretext {
     font-size: var(--perFontSize);
     font-family: var(--perFontFam);
     margin-top: 7rem;
 }
-#recipe-title{
+
+#recipe-title {
     margin-top: -20px;
     font-size: 4rem;
     margin-bottom: 7rem;
 }
-.image-group{
+
+.image-group {
     width: auto;
     position: relative;
     height: auto;
@@ -84,78 +98,95 @@ html{
     margin: auto;
 }
 
-#img1{
+#img1 {
     position: absolute;
     z-index: 1;
     left: -24rem;
 }
-#img2{
+
+#img2 {
     position: absolute;
     z-index: 2;
     left: -12rem;
 }
-#img3{
+
+#img3 {
     z-index: 3;
 }
-#img4{
+
+#img4 {
     position: absolute;
     z-index: 2;
-    right:-12rem;
+    right: -12rem;
 }
-#img5{
+
+#img5 {
     position: absolute;
     z-index: 1;
     right: -24rem;
 }
+
 @media (max-width : 750px) {
-    .image-group{
+    .image-group {
         height: 200px;
     }
-    .image-group img{
+
+    .image-group img {
         height: 150px;
     }
-    #img1 img,#img2 img,#img4 img,#img5 img{
+
+    #img1 img, #img2 img, #img4 img, #img5 img {
         height: 100px;
     }
-    #img1{
+
+    #img1 {
         left: -15rem;
-        }
-        #img2{
+    }
+
+    #img2 {
         left: -7rem;
-        }
-        #img4{
-        right:-7rem;
-        }
-        #img5{
+    }
+
+    #img4 {
+        right: -7rem;
+    }
+
+    #img5 {
         right: -15rem;
-        }
+    }
 }
+
 @media (max-width : 400px) {
-    #img1{
+    #img1 {
         left: -10rem;
-        }
-        #img2{
+    }
+
+    #img2 {
         left: -4rem;
-        }
-        #img4{
-        right:-4rem;
-        }
-        #img5{
+    }
+
+    #img4 {
+        right: -4rem;
+    }
+
+    #img5 {
         right: -10rem;
-        }
+    }
 }
-#recipe-name{
+
+#recipe-name {
     font-size: 2.1rem;
     font-weight: bold;
 }
-#recipe-desc{
+
+#recipe-desc {
     font-size: 2.1rem;
     color: #8E8E8E;
     margin-bottom: 8rem;
 }
 
 /* Timing CSS */
-#timing{
+#timing {
     height: auto;
     width: 100%;
     padding-bottom: 6rem;
@@ -164,29 +195,33 @@ html{
     background-repeat: no-repeat;
     background-position: center;
 }
-#hang-thread{
-  padding-top: 5rem;
-  width: 24.5rem;
-  margin: auto;
+
+#hang-thread {
+    padding-top: 5rem;
+    width: 24.5rem;
+    margin: auto;
 }
-#hang-frame{
+
+#hang-frame {
     width: 35rem;
     height: 19rem;
-    background: linear-gradient(black,rgb(65, 65, 65));
+    background: linear-gradient(black, rgb(65, 65, 65));
     margin: auto;
     color: white;
     border: 10px solid white;
     transform: rotate(-5deg);
     margin-top: -1rem;
 }
-#hang-frame h3{
+
+#hang-frame h3 {
     text-align: center;
     font-family: "Freestyle Script";
     font-size: 3rem;
     font-weight: bold;
     padding-top: 2rem;
 }
-#hang-frame table{
+
+#hang-frame table {
     width: 30rem;
     margin-left: 2rem;
     font-size: 1.7rem;
@@ -194,145 +229,164 @@ html{
 }
 
 /* Comments Section CSS */
-#comments{
+#comments {
     width: 122.5rem;
     margin: auto;
     padding-top: 15rem;
     gap: 2.5rem;
     margin-bottom: 18rem;
 }
-#back-btn-block{
+
+#back-btn-block {
     width: 11.5rem;
     height: 49.5rem;
-    background-image: linear-gradient(
-        rgba(49, 49, 49, 0.8),
-        rgba(49, 49, 49, 0.8)
-      ),
-      url(./img/comm3.png);
+    background-image: linear-gradient(rgba(49, 49, 49, 0.8),
+            rgba(49, 49, 49, 0.8)),
+        url(./img/comm3.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-#forward-btn-block{
+
+#forward-btn-block {
     width: 11.5rem;
     height: 49.5rem;
-    background-image: linear-gradient(
-        rgba(49, 49, 49, 0.8),
-        rgba(49, 49, 49, 0.8)
-      ),
-      url(./img/comm2.png);
+    background-image: linear-gradient(rgba(49, 49, 49, 0.8),
+            rgba(49, 49, 49, 0.8)),
+        url(./img/comm2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-#back-btn,#forward-btn{
+
+#back-btn, #forward-btn {
     width: 5rem;
     height: 5rem;
     border: 5px solid white;
     margin: auto;
     cursor: pointer;
 }
-#back-btn{
+
+#back-btn {
     border-right: transparent;
     border-bottom: transparent;
     transform: rotate(-45deg);
     top: 45%;
     left: 40%;
 }
-#forward-btn{
+
+#forward-btn {
     border-left: transparent;
     border-bottom: transparent;
     transform: rotate(45deg);
     top: 45%;
     left: 20%;
-    
+
 }
-#comm-block{
+
+#comm-block {
     gap: 3.5rem;
 }
-#comm-dis{
+
+#comm-dis {
     align-self: center;
 }
-#comm-text{
+
+#comm-text {
     font-size: 3rem;
     font-weight: bold;
     margin-right: 13rem;
     margin-top: 4rem;
     margin-bottom: 6rem;
 }
-#comm-au{
+
+#comm-au {
     font-size: 2.5rem;
     color: #5B79DB;
 }
+
 @media (max-width:1200px) {
-    html{
+    html {
         font-size: 50%;
     }
-    #comments{
+
+    #comments {
         width: 100%;
         height: auto;
     }
-    #contact-box{
-      max-width: auto;
+
+    #contact-box {
+        max-width: auto;
     }
 }
+
 @media (max-width:750px) {
-    #comments{
+    #comments {
         width: 50rem;
         height: 40rem;
         gap: 0.5rem;
     }
-    #comm-dis img{
+
+    #comm-dis img {
         width: 5rem;
     }
-    #comm-text{
+
+    #comm-text {
         font-size: 2rem;
         margin-right: 0;
         margin-bottom: 1rem;
     }
-    #comm-au{
+
+    #comm-au {
         font-size: 1.4rem;
     }
-    #comm-block{
+
+    #comm-block {
         gap: 0;
     }
-    #forward-btn-block{
+
+    #forward-btn-block {
         width: 11rem;
         height: 25rem;
     }
-    #back-btn-block{
+
+    #back-btn-block {
         width: 11rem;
         height: 25rem;
     }
-    #back-btn, #forward-btn{
+
+    #back-btn, #forward-btn {
         width: 3rem;
         height: 3rem;
     }
 }
-@media (max-width : 400px){
-    html{
+
+@media (max-width : 400px) {
+    html {
         font-size: 40%;
     }
-    #comment{
+
+    #comment {
         width: 35rem;
     }
-    #forward-btn-block,#back-btn-block{
+
+    #forward-btn-block, #back-btn-block {
         width: 6rem;
     }
-    #back-btn, #forward-btn{
+
+    #back-btn, #forward-btn {
         border-width: 2px;
     }
 }
 
 /* Contact us section CSS */
-#contact{
-    background-image: linear-gradient(
-        rgba(87, 87, 87, 0.8),
-        rgba(87, 87, 87, 0.8)
-      ),
-      url(./img/bgmap.png);
+#contact {
+    background-image: linear-gradient(rgba(87, 87, 87, 0.8),
+            rgba(87, 87, 87, 0.8)),
+        url(./img/bgmap.png);
 }
-#contact-box{
+
+#contact-box {
     position: relative;
     background-color: #EDBB0C;
     max-width: 56.5rem;
@@ -342,7 +396,8 @@ html{
     font-size: 2rem;
     color: #4B4B4B;
 }
-#loc{
+
+#loc {
     position: absolute;
     width: 0;
     height: 0;
