@@ -713,7 +713,7 @@ html {
 }
 
 #strip2 #txt {
-    font-size: 1.2rem;
+    font-size: 1.9rem;
 }
 
 #strip2 .or {
@@ -744,4 +744,5 @@ html {
 #strip3 button {
     margin-left: 10px;
     margin-right: 50px;
+    font-size: 1.7rem;
 }
