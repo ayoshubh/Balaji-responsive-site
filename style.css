@@ -475,7 +475,7 @@ html {
 }
 
 .mySlides {
-    height: 600px;
+    height: 900px;
     /* width: 4000px; */
     background-image: url("/img/Group 36.png");
     background-repeat: no-repeat;
@@ -504,7 +504,7 @@ html {
 .dot {
     cursor: pointer;
     position: relative;
-    bottom: -240px;
+    bottom: -570px;
     height: 10px;
     width: 10px;
     margin: 0px 2px;
