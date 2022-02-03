@@ -27,8 +27,8 @@ html{
 }
 #about-desc{
     background-color: rgba(255, 206, 10, 0.726);
-    width: 713px;
-    height: 365px;
+    /* width: 713px;
+    height: 365px; */
     padding: 85px 50px 90px 30px;
     text-align: center;
 }
@@ -48,7 +48,6 @@ html{
 }
 #about-cards img{
     min-width: 200px;
-    max-width: 450px;
     min-height: 100px;
 }
 #about-cards h3{
@@ -190,7 +189,7 @@ html{
         rgba(49, 49, 49, 0.8),
         rgba(49, 49, 49, 0.8)
       ),
-      url(./img/comm3.jpg);
+      url(./img/comm3.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -202,7 +201,7 @@ html{
         rgba(49, 49, 49, 0.8),
         rgba(49, 49, 49, 0.8)
       ),
-      url(./img/comm2.jpg);
+      url(./img/comm2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -244,6 +243,9 @@ html{
     color: #5B79DB;
 }
 @media (max-width:1200px) {
+    html{
+        font-size: 50%;
+    }
     #comments{
         width: 100%;
         height: auto;
