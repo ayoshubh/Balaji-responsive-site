@@ -594,11 +594,12 @@ html {
 
 #header h5 {
     text-align: center;
-    font-family: 400;
+    font-family: var(--perFontFam);
+    font-size: var(--perFontSize);
 }
 
 #header h5 .first-letter {
-    font-size: 40px;
+    font-size: 4.5rem;
     font-weight: 300;
 }
 
@@ -630,6 +631,11 @@ html {
     color: white;
     font-weight: 500;
     cursor: pointer;
+}
+.gal-btn-active{
+    background-color: #EDBB0C;
+    color: white;
+    font-weight: 500;
 }
 
 #gallery {
@@ -713,7 +719,7 @@ html {
 }
 
 #strip2 #txt {
-    font-size: 1.9rem;
+    font-size: 19px;
 }
 
 #strip2 .or {

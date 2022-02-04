@@ -31,7 +31,9 @@
             } else {
                 prNo = x + 1;
                 backNo = prNo - 1;
-                forNo = prNo + 1;
+                if(prNo === 3){
+                    forNo = 1;
+                }else {forNo = prNo + 1;}
             }
             document.getElementById('comm-img').src = "./img/comm" + prNo + ".png";
             document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm"+backNo+".png)";
@@ -47,8 +49,10 @@
                 forNo = 1;
             } else {
                 prNo = x - 1;
-                backNo = prNo + 1;
-                forNo = prNo - 1;
+                if(prNo === 1){
+                    backNo = 3;
+                }else {backNo = prNo + 1;}
+                forNo = prNo + 1;
             }
             document.getElementById('comm-img').src = "./img/comm" + prNo + ".png";
             document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm"+backNo+".png)";
@@ -65,16 +69,16 @@
             <a class="nav-link text-white" aria-current="page" href="#">HOME</a>
         </li>
         <li class="nav-item  px-2">
-            <a class="nav-link text-white" href="#">ABOUT US</a>
+            <a class="nav-link text-white" href="#about-us">ABOUT US</a>
         </li>
         <li class="nav-item  px-3">
             <div id="imgContainer"><img src="img/Group 35.png" alt=""></div>
         </li>
         <li class="nav-item  px-2">
-            <a class="nav-link text-white" href="#">GALLERY</a>
+            <a class="nav-link text-white" href="#header">GALLERY</a>
         </li>
         <li class="nav-item  px-2">
-            <a class="nav-link text-white" href="#">CONTACT US</a>
+            <a class="nav-link text-white" href="#contact">CONTACT US</a>
         </li>
     </ul>
 
@@ -268,7 +272,7 @@
             <h1>Our Gallery</h1>
         </div>
         <div class="d-flex justify-content-center align-items-center  my-5">
-            <div class="button">All</div>
+            <div class="button gal-btn-active">All</div>
             <div class="button">Snacks</div>
             <div class="button">Meals</div>
         </div>
