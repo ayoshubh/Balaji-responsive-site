@@ -29,6 +29,14 @@ html {
     right: -15%;
     z-index: -1;
 }
+@media (max-width:768px) {
+    #about-img img{
+        position: relative;
+        right: 0;
+        top: 0;
+        margin-bottom: 3rem;
+    }
+}
 
 #about-desc {
     background-color: rgba(255, 206, 10, 0.726);
@@ -632,7 +640,8 @@ html {
     font-weight: 500;
     cursor: pointer;
 }
-.gal-btn-active{
+
+.gal-btn-active {
     background-color: #EDBB0C;
     color: white;
     font-weight: 500;

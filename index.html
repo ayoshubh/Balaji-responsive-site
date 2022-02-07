@@ -23,7 +23,7 @@
         if (x == 1) {
             let imgStr = document.getElementById('comm-img').src;
             let x = Number.parseInt(imgStr[30]);
-            let forNo,prNo,backNo;
+            let forNo, prNo, backNo;
             if (x == 3) {
                 prNo = 1;
                 backNo = 3;
@@ -31,32 +31,32 @@
             } else {
                 prNo = x + 1;
                 backNo = prNo - 1;
-                if(prNo === 3){
+                if (prNo === 3) {
                     forNo = 1;
-                }else {forNo = prNo + 1;}
+                } else { forNo = prNo + 1; }
             }
             document.getElementById('comm-img').src = "./img/comm" + prNo + ".png";
-            document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm"+backNo+".png)";
-            document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm"+forNo+".png)";
+            document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
+            document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
         }
         if (x == -1) {
             let imgStr = document.getElementById('comm-img').src;
             let x = Number.parseInt(imgStr[30]);
-            let forNo,prNo,backNo;
+            let forNo, prNo, backNo;
             if (imgStr[30] == 1) {
                 prNo = 3;
                 backNo = 2;
                 forNo = 1;
             } else {
                 prNo = x - 1;
-                if(prNo === 1){
+                if (prNo === 1) {
                     backNo = 3;
-                }else {backNo = prNo + 1;}
+                } else { backNo = prNo + 1; }
                 forNo = prNo + 1;
             }
             document.getElementById('comm-img').src = "./img/comm" + prNo + ".png";
-            document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm"+backNo+".png)";
-            document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm"+forNo+".png)";
+            document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
+            document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
         }
     }
 </script>
@@ -189,7 +189,7 @@
             <div class="row text-center">
                 <h2 id="about-title">Our Story</h2>
             </div>
-            <div class="row">
+            <div class="row row-cols-1 row-cols-md-2">
                 <div class="col" id="about-img">
                     <img src="./img/aboutTitle.png" class="img-fluid" style="top: 20%;">
                 </div>
@@ -206,17 +206,17 @@
         </div>
         <div class="container" id="about-cards">
             <div class="row row-cols-1 row-cols-md-3 justify-content-center">
-                <div class="col text-center">
+                <div class="col text-center mb-5">
                     <img src="./img/about1.png" class="img-fluid">
                     <h3>We cook with passion</h3>
                     <p>Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum</p>
                 </div>
-                <div class="col text-center">
+                <div class="col text-center mb-5">
                     <img src="./img/about2.png" class="img-fluid">
                     <h3>Reservation system</h3>
                     <p>Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum</p>
                 </div>
-                <div class="col text-center">
+                <div class="col text-center mb-5">
                     <img src="./img/about3.png" class="img-fluid">
                     <h3>Amazing special events</h3>
                     <p>Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum</p>
@@ -327,6 +327,16 @@
             </div>
         </div>
     </section>
+    <script>
+        window.addEventListener('resize',CS());
+        function CS(){
+            if(window.innerWidth < 768){
+                document.getElementById('forward-btn-block').style.display = "none";
+                document.getElementById('back-btn-block').style.display = "none";
+            }
+        }
+        console.log(window.innerWidth);
+    </script>
 
     <!-- Contact us Section -->
     <section class="container-fluid" id="contact">
