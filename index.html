@@ -64,21 +64,24 @@
 <body>
 
     <!-- Header -->
-    <ul id="navbar" class="nav d-flex align-items-center justify-content-center bg-black ">
+    <ul id="navbar" class="nav  align-items-center justify-content-center bg-black ">
         <li class="nav-item  px-2 ">
-            <a class="nav-link text-white" aria-current="page" href="#">HOME</a>
+            <a class="nav-link text-white" aria-current="page" href="#">HOME </a>
         </li>
         <li class="nav-item  px-2">
             <a class="nav-link text-white" href="#about-us">ABOUT US</a>
         </li>
         <li class="nav-item  px-3">
-            <div id="imgContainer"><img src="img/Group 35.png" alt=""></div>
+            <div id="imgContainer"><img src="img/Group 35.png" alt="" class="img-fluid"></div>
         </li>
         <li class="nav-item  px-2">
             <a class="nav-link text-white" href="#header">GALLERY</a>
         </li>
         <li class="nav-item  px-2">
             <a class="nav-link text-white" href="#contact">CONTACT US</a>
+        </li>
+        <li id="hamburger" class="nav-item  px-2">
+            <i class="bi-2x bi-list"></i>
         </li>
     </ul>
 
@@ -157,10 +160,10 @@
     </script>
 
     <!-- Order Now  -->
-    <div class="d-flex justify-content-center align-items-center ">
-        <div class="order-container d-flex ">
+    <div id="orderNow" >
+        <div class="order-container">
             <div id="strip1" class="py-2 px-4 h6">
-                Our <span id="dfood"><br>Delicious<br> food </span><br>at your<br> Doorstep
+                Our <span id="dfood">Delicious food </span>at your Doorstep
             </div>
             <div id="strip2" class="d-flex flex-column justify-content-center align-items-center">
                 <span class="lead text-muted">Call us at</span>
@@ -169,11 +172,16 @@
 
                 <p></p>
             </div>
-            <div id="strip3" class="d-flex align-items-center ">
-                <span class="lead">Order On</span>
-                <img src="/img/zomato.png" class="mx-2" alt="zomato">
-                <img src="/img/swiggy.png" class="mx-2" alt="zomato">
-                <button type="button" class="btn btn-light  ">Order Now</button>
+            <div id="strip3" >
+                <span class="lead pt-5">Order On</span>
+                <div id="svgContainer" class="d-flex py-5">
+                    <img src="/img/zomato.png" class="mx-3" alt="zomato">
+                    <img src="/img/swiggy.png" class="mx-3" alt="zomato">
+                    <button type="button" class="btn btn-light  ">Order Now</button>
+                </div>
+                <!-- <img src="/img/zomato.png" class="mx-2" alt="zomato">
+                <img src="/img/swiggy.png" class="mx-2" alt="zomato"> -->
+                
             </div>
         </div>
     </div>
@@ -287,6 +295,9 @@
         <div class="div6"><img src="/img/gallery5.png" alt="" class="img-fluid"></div>
         <div class="div7"><img src="/img/gallery6.png" alt="" class="img-fluid"></div>
     </section>
+
+    <div class="gallery-link"><a href="">View More</a></div>
+    
 
     <!-- Timing Section -->
     <section id="timing">
