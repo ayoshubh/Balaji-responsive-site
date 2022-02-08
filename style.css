@@ -27,6 +27,7 @@ html {
 #about-img img {
     position: absolute;
     right: -15%;
+    top: 20%;
     z-index: -1;
 }
 @media (max-width:768px) {
@@ -134,51 +135,21 @@ html {
     right: -24rem;
 }
 
-@media (max-width : 750px) {
+@media (max-width : 768px) {
     .image-group {
-        height: 200px;
+        width: 100vw;
+        height: auto;
     }
 
-    .image-group img {
+    .image-group div {
         height: 150px;
+        position: static !important;
+        left: 0;
+        height: auto;
     }
 
-    #img1 img, #img2 img, #img4 img, #img5 img {
-        height: 100px;
-    }
-
-    #img1 {
-        left: -15rem;
-    }
-
-    #img2 {
-        left: -7rem;
-    }
-
-    #img4 {
-        right: -7rem;
-    }
-
-    #img5 {
-        right: -15rem;
-    }
-}
-
-@media (max-width : 400px) {
-    #img1 {
-        left: -10rem;
-    }
-
-    #img2 {
-        left: -4rem;
-    }
-
-    #img4 {
-        right: -4rem;
-    }
-
-    #img5 {
-        right: -10rem;
+    #img2 img, #img3 img, #img4 img, #img5 img {
+        display: none;
     }
 }
 
@@ -243,6 +214,7 @@ html {
     padding-top: 15rem;
     gap: 2.5rem;
     margin-bottom: 18rem;
+    position: relative;
 }
 
 #back-btn-block {
@@ -312,6 +284,33 @@ html {
     font-size: 2.5rem;
     color: #5B79DB;
 }
+#dotc-con{
+    position: absolute;
+    bottom: -40px;
+    display: none;
+    width: 100vw;
+    text-align: center;
+}
+#dotr-con{
+    position: absolute;
+    bottom: 33px;
+    display: none;
+    width: 100vw;
+}
+.dot1 {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0px 2px;
+    border: 2px solid gray;
+    background-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dot1:hover {
+    background-color: #EDBB0C;
+}
 
 @media (max-width:1200px) {
     html {
@@ -327,69 +326,36 @@ html {
         max-width: auto;
     }
 }
-
-@media (max-width:750px) {
-    #comments {
-        width: 50rem;
-        height: 40rem;
+@media (max-width:768px) {
+    #comments{
+        padding-top: 7rem;
+    }
+    #comm-block{
+        flex-direction: column;
+        align-items: center;
         gap: 0.5rem;
     }
-
-    #comm-dis img {
-        width: 5rem;
+    #comm-img{
+        width: 20rem;
     }
-
-    #comm-text {
-        font-size: 2rem;
+    #comm-dis{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #comm-text{
+        margin-top: 1rem;
+        padding-left: 10rem;
+        padding-right: 10rem;
+        text-align: center;
         margin-right: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
-
-    #comm-au {
-        font-size: 1.4rem;
-    }
-
-    #comm-block {
-        gap: 0;
-    }
-
-    #forward-btn-block {
-        width: 11rem;
-        height: 25rem;
-    }
-
-    #back-btn-block {
-        width: 11rem;
-        height: 25rem;
-    }
-
-    #back-btn, #forward-btn {
-        width: 3rem;
-        height: 3rem;
+    #quotas{
+        width: 30px;
     }
 }
 
-@media (max-width : 400px) {
-    html {
-        font-size: 40%;
-    }
-
-    #comment {
-        width: 35rem;
-    }
-
-    #forward-btn-block, #back-btn-block {
-        width: 6rem;
-    }
-
-    #back-btn, #forward-btn {
-        border-width: 2px;
-    }
-
-    #forward-btn {
-        left: 0;
-    }
-}
 
 /* Contact us section CSS */
 #contact {

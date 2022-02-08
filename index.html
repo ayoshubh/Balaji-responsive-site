@@ -61,7 +61,7 @@
     }
 </script>
 
-<body>
+<body onresize="CS()">
 
     <!-- Header -->
     <ul id="navbar" class="nav d-flex align-items-center justify-content-center bg-black ">
@@ -191,7 +191,7 @@
             </div>
             <div class="row row-cols-1 row-cols-md-2">
                 <div class="col" id="about-img">
-                    <img src="./img/aboutTitle.png" class="img-fluid" style="top: 20%;">
+                    <img src="./img/aboutTitle.png" class="img-fluid">
                 </div>
                 <div class="col" id="about-desc">
                     <div>
@@ -227,7 +227,7 @@
 
     <!-- Recipe Section -->
     <section id="recipe">
-        <div class="container-fluid">
+        <div class="container-fluid position-relative">
             <div class="row">
                 <p id="recipe-pretext">Our Feature Recipe</p>
             </div>
@@ -259,6 +259,11 @@
             <div class="row">
                 <p id="recipe-desc">Nulla id tortor nec lectus feugiat ultricies.<br>Duis sit amet augue vitae dui
                     bibendum</p>
+            </div>
+            <div id="dotr-con">
+                <span class="dot1 active"></span>
+                <span class="dot1"></span>
+                <span class="dot1"></span>
             </div>
         </div>
     </section>
@@ -317,7 +322,7 @@
             <div id="comm-block" class="d-flex">
                 <img id="comm-img" src="./img/comm1.png" class="img-fluid" style="max-height: 50rem;">
                 <div id="comm-dis">
-                    <img src="./img/Quotas.png" class="img-fluid">
+                    <img src="./img/Quotas.png" id="quotas" class="img-fluid">
                     <p id="comm-text">I tried live Khazana with mint Its and was awesome</p>
                     <p id="comm-au">Sweta Tripathi</p>
                 </div>
@@ -325,14 +330,27 @@
             <div id="forward-btn-block" class="position-relative">
                 <div id="forward-btn" class="position-absolute" onclick="chn(1)"></div>
             </div>
+            <div id="dotc-con">
+                <span class="dot1 active"></span>
+                <span class="dot1"></span>
+                <span class="dot1"></span>
+            </div>
         </div>
+
     </section>
     <script>
-        window.addEventListener('resize',CS());
-        function CS(){
-            if(window.innerWidth < 768){
+        window.addEventListener('resize', CS(), true);
+        function CS() {
+            if (window.innerWidth < 768) {
                 document.getElementById('forward-btn-block').style.display = "none";
                 document.getElementById('back-btn-block').style.display = "none";
+                document.getElementById('dotc-con').style.display = "block";
+                document.getElementById('dotr-con').style.display = "block";
+            }else{
+                document.getElementById('forward-btn-block').style.display = "block";
+                document.getElementById('back-btn-block').style.display = "block";
+                document.getElementById('dotc-con').style.display = "none";
+                document.getElementById('dotr-con').style.display = "none";
             }
         }
         console.log(window.innerWidth);
@@ -347,32 +365,34 @@
                         <h3 style="font-size: 3rem; font-weight: bold; color: black;">Contact Us</h3>
                     </div>
                 </div>
-                <div class="row justify-content-center my-4">
-                    <div class="col-auto align-self-center">
+                <div class="row justify-content-center my-4 ">
+                    <div class="col-12 col-md-auto text-center">
                         <img src="./img/loc.png" style="max-width: 15px;">
                     </div>
-                    <div class="col-10 text-center">
+                    <div class="col-auto col-md-10 text-center">
                         Mother School Road, Janak Nagar Society, Balaji Square B/H Manorath Flat, B/S,
                         Gotri - Vasna Rd, Vadodara, Gujarat 391440
                     </div>
                 </div>
                 <div class="row justify-content-center my-4">
-                    <div class="col-auto">
+                    <div class="col-12 text-center col-md-auto">
                         <img src="./img/call.png" style="max-width: 15px;">
                     </div>
-                    <div class="col-auto">
+                    <div class="col-auto col-md-auto">
                         +91 97277 79511
                     </div>
                 </div>
                 <div class="row justify-content-center my-4">
-                    <div class="col-auto">
+                    <div class="col-12 col-md-auto text-center">
                         <img src="./img/mail.png" style="max-width: 15px;">
                     </div>
-                    <div class="col-auto">
+                    <div class="col-auto col-md-auto">
                         info@balajirestaurant.in
                     </div>
                 </div>
-                <div id="loc"></div>
+                <div style="width: 100%;">
+                    <div id="loc"></div>
+                </div>
             </div>
         </div>
 
