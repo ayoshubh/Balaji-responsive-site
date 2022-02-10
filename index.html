@@ -57,6 +57,18 @@
             document.getElementById('comm-img').src = "./img/comm" + prNo + ".png";
             document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
             document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
+
+        }
+    }
+    let i = 0;
+    function showNav() {
+        if(i == 0){
+            document.getElementById('mobNav').style.animationName = "show";
+            i=1;
+        }else{
+            document.getElementById('mobNav').style.animationName = "hide";
+            i=0;
+
         }
     }
 </script>
@@ -80,7 +92,19 @@
         <li class="nav-item  px-2">
             <a class="nav-link text-white" href="#contact">CONTACT US</a>
         </li>
+        <li id="hamburger" class="nav-item  px-2" onclick="showNav()">
+            <i class="bi-2x bi-list"></i>
+        </li>
     </ul>
+    <div id="mobNav">
+        <a class="nav-link text-white" aria-current="page" href="#">HOME </a>
+        <hr>
+        <a class="nav-link text-white" href="#about-us">ABOUT US</a>
+        <hr>
+        <a class="nav-link text-white" href="#header">GALLERY</a>
+        <hr>
+        <a class="nav-link text-white" href="#contact">CONTACT US</a>
+    </div>
 
     <!-- Carousel -->
     <div class="slideshow-container .container-fluid">
@@ -157,8 +181,8 @@
     </script>
 
     <!-- Order Now  -->
-    <div class="d-flex justify-content-center align-items-center ">
-        <div class="order-container d-flex ">
+    <div id="orderNow">
+        <div class="order-container">
             <div id="strip1" class="py-2 px-4 h6">
                 Our <span id="dfood"><br>Delicious<br> food </span><br>at your<br> Doorstep
             </div>
@@ -169,11 +193,16 @@
 
                 <p></p>
             </div>
-            <div id="strip3" class="d-flex align-items-center ">
-                <span class="lead">Order On</span>
-                <img src="/img/zomato.png" class="mx-2" alt="zomato">
-                <img src="/img/swiggy.png" class="mx-2" alt="zomato">
-                <button type="button" class="btn btn-light  ">Order Now</button>
+            <div id="strip3">
+                <span class="lead pt-5">Order On</span>
+                <div id="svgContainer" class="d-flex py-5">
+                    <img src="/img/zomato.png" class="mx-3" alt="zomato">
+                    <img src="/img/swiggy.png" class="mx-3" alt="zomato">
+                    <button type="button" class="btn btn-light  ">Order Now</button>
+                </div>
+                <!-- <img src="/img/zomato.png" class="mx-2" alt="zomato">
+                <img src="/img/swiggy.png" class="mx-2" alt="zomato"> -->
+
             </div>
         </div>
     </div>
@@ -292,6 +321,9 @@
         <div class="div6"><img src="/img/gallery5.png" alt="" class="img-fluid"></div>
         <div class="div7"><img src="/img/gallery6.png" alt="" class="img-fluid"></div>
     </section>
+
+    <div class="gallery-link"><a href="">View More</a></div>
+
 
     <!-- Timing Section -->
     <section id="timing">
