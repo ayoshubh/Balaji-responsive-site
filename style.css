@@ -431,6 +431,9 @@ html {
     display: none;
     cursor: pointer;
 }
+#mobNav{
+    display: none;
+}
 
 @media(max-width:550px)
 { 
@@ -448,11 +451,47 @@ html {
 
     #navbar{
         height:130px;
+        z-index: 8;
     }
 
     
     #navbar li a{
         display: none;
+    }
+
+    #mobNav{
+        display: block;
+        position: absolute;
+        top: 15rem;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+        font-size: 2rem;
+        z-index: 6;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes show {
+        0%{
+            top:-100px
+        }
+        100%{
+            top: 15rem;
+        }
+    }
+    @keyframes hide {
+        0%{
+            top:15rem;
+        }
+        100%{
+            top: -200px;
+        }
+    }
+    #mobNav hr{
+        height: 5px;
+    }
+    #mobNav a{
+        padding-bottom: 1.2rem;
     }
 
     #hamburger{
