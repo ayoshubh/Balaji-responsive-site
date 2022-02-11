@@ -420,8 +420,6 @@
             function chn(x) {
                 if (x == 1) {
                     let imgStr = document.getElementById('comm-img').src;
-                    let str = "https://balaji-restaurant.netlify.app/img/comm1.png";
-                    let aaa = "http://127.0.0.1:5502/img/comm1.png";
                     let x;
                     console.log(str.length);
                     if (imgStr.length > 36) {
@@ -448,7 +446,13 @@
                 }
                 if (x == -1) {
                     let imgStr = document.getElementById('comm-img').src;
-                    let x = Number.parseInt(imgStr[30]);
+                    let x;
+                    console.log(str.length);
+                    if (imgStr.length > 36) {
+                        x = Number.parseInt(imgStr[46]);
+                    } else {
+                        x = Number.parseInt(imgStr[30]);
+                    }
                     let forNo, prNo, backNo;
                     if (imgStr[30] == 1) {
                         prNo = 3;
