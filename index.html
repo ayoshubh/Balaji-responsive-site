@@ -447,14 +447,13 @@
                 if (x == -1) {
                     let imgStr = document.getElementById('comm-img').src;
                     let x;
-                    console.log(str.length);
                     if (imgStr.length > 36) {
                         x = Number.parseInt(imgStr[46]);
                     } else {
                         x = Number.parseInt(imgStr[30]);
                     }
                     let forNo, prNo, backNo;
-                    if (imgStr[30] == 1) {
+                    if (x === 1) {
                         prNo = 3;
                         backNo = 2;
                         forNo = 1;
