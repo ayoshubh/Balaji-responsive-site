@@ -18,59 +18,6 @@
     <title>Balaji Restaurant</title>
 </head>
 
-<script>
-    function chn(x) {
-        if (x == 1) {
-            let imgStr = document.getElementById('comm-img').src;
-            let x = Number.parseInt(imgStr[30]);
-            let forNo, prNo, backNo;
-            if (x == 3) {
-                prNo = 1;
-                backNo = 3;
-                forNo = 2;
-            } else {
-                prNo = x + 1;
-                backNo = prNo - 1;
-                if (prNo === 3) {
-                    forNo = 1;
-                } else { forNo = prNo + 1; }
-            }
-            document.getElementById('comm-img').src = "./img/comm" + prNo + ".png";
-            document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
-            document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
-        }
-        if (x == -1) {
-            let imgStr = document.getElementById('comm-img').src;
-            let x = Number.parseInt(imgStr[30]);
-            let forNo, prNo, backNo;
-            if (imgStr[30] == 1) {
-                prNo = 3;
-                backNo = 2;
-                forNo = 1;
-            } else {
-                prNo = x - 1;
-                if (prNo === 1) {
-                    backNo = 3;
-                } else { backNo = prNo + 1; }
-                forNo = prNo + 1;
-            }
-            document.getElementById('comm-img').src = "./img/comm" + prNo + ".png";
-            document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
-            document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
-        }
-    }
-    let i = 0;
-    function showNav() {
-        if(i == 0){
-            document.getElementById('mobNav').style.animationName = "show";
-            i=1;
-        }else{
-            document.getElementById('mobNav').style.animationName = "hide";
-            i=0;
-        }
-    }
-</script>
-
 <body onresize="CS()">
 
     <!-- Header -->
@@ -468,6 +415,68 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+        <script>
+            function chn(x) {
+                if (x == 1) {
+                    let imgStr = document.getElementById('comm-img').src;
+                    let str = "https://balaji-restaurant.netlify.app/img/comm1.png";
+                    let aaa = "http://127.0.0.1:5502/img/comm1.png";
+                    let x;
+                    console.log(str.length);
+                    if (imgStr.length > 36) {
+                        x = Number.parseInt(imgStr[46]);
+                    } else {
+                        x = Number.parseInt(imgStr[30]);
+                    }
+                    
+                    let forNo, prNo, backNo;
+                    if (x == 3) {
+                        prNo = 1;
+                        backNo = 3;
+                        forNo = 2;
+                    } else {
+                        prNo = x + 1;
+                        backNo = prNo - 1;
+                        if (prNo === 3) {
+                            forNo = 1;
+                        } else { forNo = prNo + 1; }
+                    }
+                    document.getElementById('comm-img').src = "./img/comm" + prNo + ".png";
+                    document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
+                    document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
+                }
+                if (x == -1) {
+                    let imgStr = document.getElementById('comm-img').src;
+                    let x = Number.parseInt(imgStr[30]);
+                    let forNo, prNo, backNo;
+                    if (imgStr[30] == 1) {
+                        prNo = 3;
+                        backNo = 2;
+                        forNo = 1;
+                    } else {
+                        prNo = x - 1;
+                        if (prNo === 1) {
+                            backNo = 3;
+                        } else { backNo = prNo + 1; }
+                        forNo = prNo + 1;
+                    }
+                    document.getElementById('comm-img').src = "./img/comm" + prNo + ".png";
+                    document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
+                    document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
+                }
+            }
+            let i = 0;
+            function showNav() {
+                if(i == 0){
+                    document.getElementById('mobNav').style.animationName = "show";
+                    i=1;
+                }else{
+                    document.getElementById('mobNav').style.animationName = "hide";
+                    i=0;
+                }
+            }
+        </script>
 </body>
 
 </html>
