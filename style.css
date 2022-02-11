@@ -443,14 +443,15 @@ html {
         left: 40px;
         width:100px;
         height:95px;
+        background: transparent;
     } 
 
     #imgContainer img{
-        height:110px;
+        height:55px;
     } 
 
     #navbar{
-        height:130px;
+        height:70px;
         z-index: 8;
     }
 
@@ -462,26 +463,26 @@ html {
     #mobNav{
         display: block;
         position: absolute;
-        top: 15rem;
+        top: -200px;
         width: 100%;
         background-color: black;
         text-align: center;
         font-size: 2rem;
         z-index: 6;
-        animation-duration: 2s;
+        animation-duration: 0.5s;
         animation-fill-mode: forwards;
     }
     @keyframes show {
         0%{
-            top:-100px
+            top:-200px
         }
         100%{
-            top: 15rem;
+            top: 8rem;
         }
     }
     @keyframes hide {
         0%{
-            top:15rem;
+            top:8rem;
         }
         100%{
             top: -200px;
