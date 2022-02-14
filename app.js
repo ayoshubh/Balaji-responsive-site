@@ -8,21 +8,33 @@ function chn(x) {
             x = Number.parseInt(imgStr[30]);
         }
 
+        let cArr;
         let forNo, prNo, backNo;
-        if (x == 3) {
-            prNo = 1;
-            backNo = 3;
-            forNo = 2;
-        } else {
-            prNo = x + 1;
-            backNo = prNo - 1;
-            if (prNo === 3) {
-                forNo = 1;
-            } else { forNo = prNo + 1; }
-        }
-        document.getElementById('comm-img').src = "./img/comm" + prNo + ".png";
-        document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
-        document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
+        fetch("./comments.json")
+            .then(response => {
+                return (response.json());
+            }).then(jsondata => {
+                cArr = jsondata;
+                cl = cArr.length;
+                if (x == cl) {
+                    prNo = 1;
+                    backNo = cArr[cl - 1].id;
+                    forNo = prNo + 1;
+                } else {
+                    prNo = x + 1;
+                    backNo = prNo - 1;
+                    if (prNo === cl) {
+                        forNo = 1;
+                    } else { forNo = prNo + 1; }
+                }
+
+                document.getElementById('comm-img').src = "./img/comm" + prNo + ".png";
+                document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
+                document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
+
+                document.getElementById('comm-au').innerText = cArr[prNo-1].name;
+                document.getElementById('comm-text').innerText = cArr[prNo-1].com;
+            });
     }
     if (x == -1) {
         let imgStr = document.getElementById('comm-img').src;
@@ -32,7 +44,34 @@ function chn(x) {
         } else {
             x = Number.parseInt(imgStr[30]);
         }
+
+        let cArr;
         let forNo, prNo, backNo;
+
+        fetch("./comments.json")
+            .then(response => {
+                return (response.json());
+            }).then(jsondata => {
+                cArr = jsondata;
+                cl = cArr.length;
+                if (x === cArr[0].id) {
+                    prNo = cl;
+                    backNo = prNo-1;
+                    forNo = 1;
+                } else {
+                    prNo = x - 1;
+                    if (prNo === cArr[0].id) {
+                        backNo = cl;
+                    } else { backNo = prNo + 1; }
+                    forNo = prNo + 1;
+                }
+                document.getElementById('comm-img').src = "./img/comm" + prNo + ".png";
+                document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
+                document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
+
+                document.getElementById('comm-au').innerText = cArr[prNo-1].name;
+                document.getElementById('comm-text').innerText = cArr[prNo-1].com;
+            });
         if (x === 1) {
             prNo = 3;
             backNo = 2;
@@ -102,3 +141,7 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+document.getElementById('recipe-img-block').addEventListener('click',e=>{
+    e.preventDefault();
+    console.log("Hello")
+})

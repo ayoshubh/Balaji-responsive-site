@@ -129,6 +129,7 @@ html {
 
 #img3 {
     z-index: 3;
+    transform: scale(1.2);
 }
 
 #img4 {
@@ -164,6 +165,7 @@ html {
 #recipe-name {
     font-size: 2.1rem;
     font-weight: bold;
+    padding-top: 2rem;
 }
 
 #recipe-desc {
