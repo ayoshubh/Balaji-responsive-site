@@ -1,6 +1,6 @@
 function chn(x) {
     if (x == 1) {
-        let imgStr = document.getElementById('comm-img').src;
+        let imgStr = document.getElementsByClassName('comm-img')[0].src;
         let x;
         if (imgStr.length > 36) {
             x = Number.parseInt(imgStr[46]);
@@ -28,16 +28,16 @@ function chn(x) {
                     } else { forNo = prNo + 1; }
                 }
 
-                document.getElementById('comm-img').src = "./img/comm" + prNo + ".png";
+                document.getElementsByClassName('comm-img')[0].src = "./img/comm" + prNo + ".png";
                 document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
                 document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
 
-                document.getElementById('comm-au').innerText = cArr[prNo-1].name;
-                document.getElementById('comm-text').innerText = cArr[prNo-1].com;
+                document.getElementsByClassName('comm-au')[0].innerText = cArr[prNo-1].name;
+                document.getElementsByClassName('comm-text')[0].innerText = cArr[prNo-1].com;
             });
     }
     if (x == -1) {
-        let imgStr = document.getElementById('comm-img').src;
+        let imgStr = document.getElementsByClassName('comm-img')[0].src;
         let x;
         if (imgStr.length > 36) {
             x = Number.parseInt(imgStr[46]);
@@ -65,12 +65,12 @@ function chn(x) {
                     } else { backNo = prNo + 1; }
                     forNo = prNo + 1;
                 }
-                document.getElementById('comm-img').src = "./img/comm" + prNo + ".png";
+                document.getElementsByClassName('comm-img')[0].src = "./img/comm" + prNo + ".png";
                 document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
                 document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
 
-                document.getElementById('comm-au').innerText = cArr[prNo-1].name;
-                document.getElementById('comm-text').innerText = cArr[prNo-1].com;
+                document.getElementsByClassName('comm-au')[0].innerText = cArr[prNo-1].name;
+                document.getElementsByClassName('comm-text')[0].innerText = cArr[prNo-1].com;
             });
         if (x === 1) {
             prNo = 3;
