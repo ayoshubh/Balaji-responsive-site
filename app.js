@@ -1,12 +1,12 @@
 function chn(x) {
     if (x == 1) {
         let imgStr = document.getElementsByClassName('comm-img')[0].src;
-        let x;
-        if (imgStr.length > 36) {
-            x = Number.parseInt(imgStr[46]);
-        } else {
-            x = Number.parseInt(imgStr[30]);
-        }
+        let x = Number.parseInt(imgStr[imgStr.length - 5]);
+        // if (imgStr.length > 36) {
+        //     x = Number.parseInt(imgStr[46]);
+        // } else {
+        //     x = Number.parseInt(imgStr[30]);
+        // }
 
         let cArr;
         let forNo, prNo, backNo;
@@ -32,18 +32,18 @@ function chn(x) {
                 document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
                 document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
 
-                document.getElementsByClassName('comm-au')[0].innerText = cArr[prNo-1].name;
-                document.getElementsByClassName('comm-text')[0].innerText = cArr[prNo-1].com;
+                document.getElementsByClassName('comm-au')[0].innerText = cArr[prNo - 1].name;
+                document.getElementsByClassName('comm-text')[0].innerText = cArr[prNo - 1].com;
             });
     }
     if (x == -1) {
         let imgStr = document.getElementsByClassName('comm-img')[0].src;
-        let x;
-        if (imgStr.length > 36) {
-            x = Number.parseInt(imgStr[46]);
-        } else {
-            x = Number.parseInt(imgStr[30]);
-        }
+        let x = Number.parseInt(imgStr[imgStr.length - 5]);
+        // if (imgStr.length > 36) {
+        //     x = Number.parseInt(imgStr[46]);
+        // } else {
+        //     x = Number.parseInt(imgStr[30]);
+        // }
 
         let cArr;
         let forNo, prNo, backNo;
@@ -56,7 +56,7 @@ function chn(x) {
                 cl = cArr.length;
                 if (x === cArr[0].id) {
                     prNo = cl;
-                    backNo = prNo-1;
+                    backNo = prNo - 1;
                     forNo = 1;
                 } else {
                     prNo = x - 1;
@@ -69,23 +69,10 @@ function chn(x) {
                 document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
                 document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
 
-                document.getElementsByClassName('comm-au')[0].innerText = cArr[prNo-1].name;
-                document.getElementsByClassName('comm-text')[0].innerText = cArr[prNo-1].com;
+                document.getElementsByClassName('comm-au')[0].innerText = cArr[prNo - 1].name;
+                document.getElementsByClassName('comm-text')[0].innerText = cArr[prNo - 1].com;
             });
-        if (x === 1) {
-            prNo = 3;
-            backNo = 2;
-            forNo = 1;
-        } else {
-            prNo = x - 1;
-            if (prNo === 1) {
-                backNo = 3;
-            } else { backNo = prNo + 1; }
-            forNo = prNo + 1;
-        }
-        document.getElementById('comm-img').src = "./img/comm" + prNo + ".png";
-        document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
-        document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
+
     }
 }
 
@@ -131,7 +118,7 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     //dots[slideIndex - 1].className += " active";
 }
-document.getElementById('recipe-img-block').addEventListener('click',e=>{
+document.getElementById('recipe-img-block').addEventListener('click', e => {
     e.preventDefault();
     console.log("Hello")
 })
@@ -144,18 +131,18 @@ function chnGal(a) {
     let btns = document.getElementsByClassName("button");
     console.log(btns);
     for (let index = 0; index < btns.length; index++) {
-        btns[index].className = btns[index].className.replace(' gal-btn-active','');    
+        btns[index].className = btns[index].className.replace(' gal-btn-active', '');
     }
     btns[a].className += ' gal-btn-active';
-    if(a===0){
+    if (a === 0) {
         all.style.display = "grid";
         snack.style.display = "none";
         meal.style.display = "none";
-    }else if (a===1) {
+    } else if (a === 1) {
         all.style.display = "none";
         snack.style.display = "grid";
         meal.style.display = "none";
-    }else if(a===2){
+    } else if (a === 2) {
         all.style.display = "none";
         snack.style.display = "none";
         meal.style.display = "grid";
