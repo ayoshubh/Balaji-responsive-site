@@ -18,38 +18,40 @@
     <title>Balaji Restaurant</title>
 </head>
 
-<body onresize="CS()">
+<body>
 
     <!-- Header -->
-    <ul id="navbar" class="nav  align-items-center justify-content-center bg-black ">
-        <li class="nav-item  px-2 ">
+    <nav>
+        <ul id="navbar" class="nav  align-items-center justify-content-center bg-black ">
+            <li class="nav-item  px-2 ">
+                <a class="nav-link text-white" aria-current="page" href="#">HOME </a>
+            </li>
+            <li class="nav-item  px-2">
+                <a class="nav-link text-white" href="#about-us">ABOUT US</a>
+            </li>
+            <li class="nav-item  px-3">
+                <div id="imgContainer"><img src="img/Group 35.png" alt="" class="img-fluid"></div>
+            </li>
+            <li class="nav-item  px-2">
+                <a class="nav-link text-white" href="#header">GALLERY</a>
+            </li>
+            <li class="nav-item  px-2">
+                <a class="nav-link text-white" href="#contact">CONTACT US</a>
+            </li>
+            <li id="hamburger" class="nav-item  px-2" onclick="showNav()">
+                <i class="bi-2x bi-list"></i>
+            </li>
+        </ul>
+        <div id="mobNav">
             <a class="nav-link text-white" aria-current="page" href="#">HOME </a>
-        </li>
-        <li class="nav-item  px-2">
+            <hr>
             <a class="nav-link text-white" href="#about-us">ABOUT US</a>
-        </li>
-        <li class="nav-item  px-3">
-            <div id="imgContainer"><img src="img/Group 35.png" alt="" class="img-fluid"></div>
-        </li>
-        <li class="nav-item  px-2">
+            <hr>
             <a class="nav-link text-white" href="#header">GALLERY</a>
-        </li>
-        <li class="nav-item  px-2">
+            <hr>
             <a class="nav-link text-white" href="#contact">CONTACT US</a>
-        </li>
-        <li id="hamburger" class="nav-item  px-2" onclick="showNav()">
-            <i class="bi-2x bi-list"></i>
-        </li>
-    </ul>
-    <div id="mobNav">
-        <a class="nav-link text-white" aria-current="page" href="#">HOME </a>
-        <hr>
-        <a class="nav-link text-white" href="#about-us">ABOUT US</a>
-        <hr>
-        <a class="nav-link text-white" href="#header">GALLERY</a>
-        <hr>
-        <a class="nav-link text-white" href="#contact">CONTACT US</a>
-    </div>
+        </div>
+    </nav>
 
     <!-- Carousel -->
     <div class="slideshow-container .container-fluid">
@@ -59,11 +61,11 @@
                 <h1 class="mt-5"><Strong>WELCOME TO BALAJI RESTAURANT</Strong></h1>
                 <P class="lead ">We offer all the best quality products for an amazing start of the day.</P>
             </div>
-            <div style="text-align:center">
+            <!-- <div style="text-align:center">
                 <span id="d1" class="dot" onclick="currentSlide(1)"></span>
                 <span id="d2" class="dot" onclick="currentSlide(2)"></span>
                 <span id="d3" class="dot" onclick="currentSlide(3)"></span>
-            </div>
+            </div> -->
         </div>
 
         <div class="mySlides ">
@@ -72,11 +74,11 @@
                 <P class="lead ">We offer all the best quality products for an amazing start of the day.</P>
             </div>
 
-            <div style="text-align:center">
+            <!-- <div style="text-align:center">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
+            </div> -->
         </div>
 
         <div class="mySlides ">
@@ -84,14 +86,19 @@
                 <h1 class="mt-5"><Strong>WELCOME TO BALAJI RESTAURANT</Strong></h1>
                 <P class="lead ">We offer all the best quality products for an amazing start of the day.</P>
             </div>
-            <div style="text-align:center">
+            <!-- <div style="text-align:center">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
+            </div> -->
         </div>
 
     </div>
+    <!-- <div style="text-align:center">
+        <span id="d1" class="dot" onclick="currentSlide(1)"></span>
+        <span id="d2" class="dot" onclick="currentSlide(2)"></span>
+        <span id="d3" class="dot" onclick="currentSlide(3)"></span>
+    </div> -->
     <br>
 
     <!-- Order Now  -->
@@ -127,45 +134,42 @@
             <div class="row text-center">
                 <div class="col">
                     <p id="about-pretitle">Discover</p>
+                    <h2 id="about-title">Our Story</h2>
                 </div>
-            </div>
-            <div class="row text-center">
-                <h2 id="about-title">Our Story</h2>
-            </div>
-            <div class="row row-cols-1 row-cols-md-2">
-                <div class="col" id="about-img">
-                    <img src="./img/aboutTitle.png" class="img-fluid">
-                </div>
-                <div class="col" id="about-desc">
-                    <div>
-                        <h2>"cooking is like fashion.</h2>
-                        <p>Execitation photo booth stumptown tote bag Banksy, elit small batch freegan sed.
-                            Craft beer elit seitan exercitation, photo booth et 8-bit kale chips
-                            proident chillwave deep v laborum.
-                        </p>
+                <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col" id="about-img">
+                        <img src="./img/aboutTitle.png" class="img-fluid">
+                    </div>
+                    <div class="col" id="about-desc">
+                        <div>
+                            <h2>"cooking is like fashion.</h2>
+                            <p>Execitation photo booth stumptown tote bag Banksy, elit small batch freegan sed.
+                                Craft beer elit seitan exercitation, photo booth et 8-bit kale chips
+                                proident chillwave deep v laborum.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container" id="about-cards">
-            <div class="row row-cols-1 row-cols-md-3 justify-content-center">
-                <div class="col text-center mb-5">
-                    <img src="./img/about1.png" class="img-fluid">
-                    <h3>We cook with passion</h3>
-                    <p>Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum</p>
-                </div>
-                <div class="col text-center mb-5">
-                    <img src="./img/about2.png" class="img-fluid">
-                    <h3>Reservation system</h3>
-                    <p>Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum</p>
-                </div>
-                <div class="col text-center mb-5">
-                    <img src="./img/about3.png" class="img-fluid">
-                    <h3>Amazing special events</h3>
-                    <p>Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum</p>
+            <div class="container" id="about-cards">
+                <div class="row row-cols-1 row-cols-md-4 justify-content-center">
+                    <div class="col text-center m-5 ab-cr">
+                        <img src="./img/about1.png" class="img-fluid">
+                        <h3>We cook with passion</h3>
+                        <p>Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum</p>
+                    </div>
+                    <div class="col text-center m-5 ab-cr">
+                        <img src="./img/about2.png" class="img-fluid">
+                        <h3>Reservation system</h3>
+                        <p>Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum</p>
+                    </div>
+                    <div class="col text-center m-5 ab-cr">
+                        <img src="./img/about3.png" class="img-fluid">
+                        <h3>Amazing special events</h3>
+                        <p>Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum</p>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Recipe Section -->
@@ -284,7 +288,7 @@
         </div>
 
     </section>
-    
+
 
     <!-- Contact us Section -->
     <section class="container-fluid" id="contact">
@@ -354,9 +358,9 @@
             <div class="container">
                 <hr id="line">
             </div>
-            <div class="container d-flex justify-content-center ">
-                <div class="child px-2"><i class="fab fa-facebook fa-2x"></i></div>
-                <div class="child px-2"><i class="fab fa-instagram-square fa-2x"></i></div>
+            <div class="container d-flex justify-content-center py-5">
+                <div class="child px-3"><i class="fab fa-facebook fa-2x"></i></div>
+                <div class="child px-3"><i class="fab fa-instagram-square fa-2x"></i></div>
             </div>
 
         </div>

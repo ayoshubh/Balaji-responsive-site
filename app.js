@@ -90,6 +90,7 @@ function chn(x) {
 }
 
 
+
 let i = 0;
 function showNav() {
     if (i == 0) {
@@ -101,19 +102,6 @@ function showNav() {
     }
 }
 
-function CS() {
-    if (window.innerWidth < 768) {
-        document.getElementById('forward-btn-block').style.display = "none";
-        document.getElementById('back-btn-block').style.display = "none";
-        document.getElementById('dotc-con').style.display = "block";
-        document.getElementById('dotr-con').style.display = "block";
-    } else {
-        document.getElementById('forward-btn-block').style.display = "block";
-        document.getElementById('back-btn-block').style.display = "block";
-        document.getElementById('dotc-con').style.display = "none";
-        document.getElementById('dotr-con').style.display = "none";
-    }
-}
 
 var slideIndex = 1;
 showSlides(slideIndex);
