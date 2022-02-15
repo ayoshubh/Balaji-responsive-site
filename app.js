@@ -91,6 +91,8 @@ function chn(x) {
 
 
 
+
+
 let i = 0;
 function showNav() {
     if (i == 0) {
@@ -127,9 +129,35 @@ function showSlides(n) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    //dots[slideIndex - 1].className += " active";
 }
 document.getElementById('recipe-img-block').addEventListener('click',e=>{
     e.preventDefault();
     console.log("Hello")
 })
+
+const all = document.getElementById('gallery-all');
+const snack = document.getElementById('gallery-snack');
+const meal = document.getElementById('gallery-meal');
+
+function chnGal(a) {
+    let btns = document.getElementsByClassName("button");
+    console.log(btns);
+    for (let index = 0; index < btns.length; index++) {
+        btns[index].className = btns[index].className.replace(' gal-btn-active','');    
+    }
+    btns[a].className += ' gal-btn-active';
+    if(a===0){
+        all.style.display = "grid";
+        snack.style.display = "none";
+        meal.style.display = "none";
+    }else if (a===1) {
+        all.style.display = "none";
+        snack.style.display = "grid";
+        meal.style.display = "none";
+    }else if(a===2){
+        all.style.display = "none";
+        snack.style.display = "none";
+        meal.style.display = "grid";
+    }
+}
