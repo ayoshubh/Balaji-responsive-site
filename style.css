@@ -190,7 +190,7 @@ html {
     height: auto;
     width: 100%;
     padding-bottom: 6rem;
-    background: url(./img/Group\ 45.png);
+    background: url("./img/timingbg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -582,7 +582,6 @@ html {
 .mySlides {
     position: relative;
     height: 85vh;
-    width: 100vw;
     background-image: url("/img/Group 36.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -760,6 +759,32 @@ html {
     color: white;
     font-weight: 500;
 }
+.div1{
+    position: relative;
+    transition: 0.5s;
+}
+.div1:hover{
+    transform: scale(1.05);
+}
+
+/* .galHov{
+    background-color: rgba(0, 0, 0, 0.507);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    opacity: 0;
+    transition: 0.5s;
+}
+.galHov:hover{
+    opacity: 1;
+} */
 
 .gal{
     display: grid;

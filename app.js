@@ -1,13 +1,28 @@
+$(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        dots:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })    
+})
+
+
 function chn(x) {
     if (x == 1) {
         let imgStr = document.getElementsByClassName('comm-img')[0].src;
         let x = Number.parseInt(imgStr[imgStr.length - 5]);
-        // if (imgStr.length > 36) {
-        //     x = Number.parseInt(imgStr[46]);
-        // } else {
-        //     x = Number.parseInt(imgStr[30]);
-        // }
-
         let cArr;
         let forNo, prNo, backNo;
         fetch("./comments.json")
@@ -39,12 +54,6 @@ function chn(x) {
     if (x == -1) {
         let imgStr = document.getElementsByClassName('comm-img')[0].src;
         let x = Number.parseInt(imgStr[imgStr.length - 5]);
-        // if (imgStr.length > 36) {
-        //     x = Number.parseInt(imgStr[46]);
-        // } else {
-        //     x = Number.parseInt(imgStr[30]);
-        // }
-
         let cArr;
         let forNo, prNo, backNo;
 
@@ -106,6 +115,7 @@ function currentSlide(n) {
 function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");
+    console.log(slides);
     var dots = document.getElementsByClassName("dot");
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
