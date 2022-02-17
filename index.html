@@ -107,23 +107,30 @@
     <!-- Order Now  -->
     <div id="orderNow">
         <div class="order-container">
-            <div id="strip1" class="py-2 px-4 h6">
+            <div id="strip1" class="py-5 px-4 h6">
                 Our <span id="dfood">Delicious food </span>at your Doorstep
             </div>
-            <div id="strip2" class="d-flex flex-column justify-content-end align-items-center">
-                <span class="lead text-muted">Call us at</span>
-                <!-- <a href=”tel:+91-804-275-4444″>1-877-538-5888</a> -->
-                <span id="txt"><strong>+91 97277 79511</strong></span>
+            <div id="strip2" class="d-flex flex-column justify-content-end align-items-center text-white px-5 py-5">
+                <span class="lead text-white">Call us at</span>
+                <a id="phone" href=" tel: +91 9727779511"><span id="txt"><strong>+91 97277 79511</strong></span></a>
+
                 <div class="or  px-1">or</div>
 
-                <p></p>
             </div>
             <div id="strip3">
-                <span class="lead fs-3">Order On</span>
+                <span class="lead fs-2 text-white mx-3">
+
+                    <b>Click to order on</b>
+                </span>
                 <div id="svgContainer" class="d-flex py-5 align-items-center">
-                    <img src="/img/zomato.png" class="mx-3" alt="zomato" style="width: 40px;">
-                    <img src="/img/swiggy.png" class="mx-3" alt="swiggy" style="width: 40px;">
-                    <button class="btn btn-light ">Order Now</button>
+                    <a href="http://zoma.to/r/18812052" class="mx-5" target=" _blank">
+                        <img src="/img/zomato.png" alt="zomato" style="width: 5rem;">
+                    </a>
+                    <a href="https://www.swiggy.com/restaurants/balaji-restaurant-gotri-vadodara-408518" class="mx-5"
+                        target=" _blank">
+                        <img src="/img/swiggy.png" alt="swiggy" style="width: 5rem;">
+                    </a>
+                    <!-- <button class="btn btn-light ">Order Now</button> -->
                 </div>
                 <!-- <img src="/img/zomato.png" class="mx-2" alt="zomato">
                 <img src="/img/swiggy.png" class="mx-2" alt="zomato"> -->
@@ -308,7 +315,7 @@
 
     </section>
 
-    <section id="gallery-snack" class=" gal-sna marb" style="display: none;">
+    <section id="gallery-snack" class="container gal-sna marb" style="display: none;">
 
         <div class="div1">
             <a data-fslightbox="gallery" href="./img/gallery1.png">
@@ -427,9 +434,15 @@
 
 
     <!-- Contact us Section -->
+
     <section class="container-fluid" id="contact">
-        <div class="row">
-            <div class="container" id="contact-box">
+
+        <div class="row" style="position: relative; ">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1845.6234034107329!2d73.14471257327146!3d22.306503804512506!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x48a5c377232f95e9!2sBalaji%20Restaurant!5e0!3m2!1sen!2sin!4v1645078565873!5m2!1sen!2sin"
+                width="600" height="450" allowfullscreen="" loading=" lazy">
+            </iframe>
+            <div class="container justify-content-center" id="contact-box">
                 <div class="row justify-content-center">
                     <div class="col-auto my-5">
                         <h3 style="font-size: 3rem; font-weight: bold; color: black;">Contact Us</h3>
@@ -449,10 +462,11 @@
                         <img src="./img/call.png" style="max-width: 15px;">
                     </div>
                     <div class="col-auto col-md-auto">
-                        +91 97277 79511
+                        +91 97277 79511 </span>
+                        </a>
                     </div>
                 </div>
-                <div class="row justify-content-center my-4">
+                <div class=" row justify-content-center my-4">
                     <div class="col-12 col-md-auto text-center">
                         <img src="./img/mail.png" style="max-width: 15px;">
                     </div>
@@ -466,7 +480,9 @@
             </div>
         </div>
 
+
     </section>
+
 
     <!-- Footer -->
 
@@ -502,15 +518,15 @@
         </div>
     </footer>
 
-
-
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <!-- < !--Bootstrap Bundle with Popper-->
+    <!-- <script>@5.1.3 / dist / js / bootstrap.bundle.min.js"
+        integrity = "sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin = "anonymous" >
+    </script> -->
 
     <script src="./js/fslightbox.js"></script>
     <script src="./app.js"></script>
+
+
 </body>
 
 </html>

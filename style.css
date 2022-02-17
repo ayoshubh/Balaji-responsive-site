@@ -410,7 +410,7 @@ html {
 }
 
 /* Contact us section CSS */
-#contact {
+/* #contact {
   background-image: linear-gradient(
       rgba(49, 49, 49, 0.8),
       rgba(49, 49, 49, 0.8)
@@ -419,17 +419,38 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
+} */
+/* #map {
+  background-color: 
+      rgba(49, 49, 49, 0.8),
+} */
 
 #contact-box {
-  position: relative;
+  position: absolute;
   background-color: #edbb0c;
   max-width: 56.5rem;
-  margin: auto;
-  margin-top: 10rem;
+  z-index:10;
+  left: 20%;
+  right: 20%; 
+
+  /* left:33vw; */
+  /* margin: auto; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center; */
+  margin-top: 7rem;
   margin-bottom: 10rem;
   font-size: 2rem;
   color: #4b4b4b;
+}
+iframe{
+  position: relative;
+
+}
+
+#phone{
+  cursor: default;
 }
 
 #loc {
@@ -446,6 +467,7 @@ html {
   #contact-box {
     max-width: 30rem;
   }
+  
 }
 
 /* ===================================================================================================================================================================== */
@@ -505,7 +527,8 @@ html {
     height: 95px;
     background: transparent;
   }
-
+ 
+ 
   #imgContainer img {
     height: 55px;
   }
@@ -967,25 +990,31 @@ html {
 }
 
 #strip2 {
-  background-color: #edbb0c;
+  background-color: #ff3737;
   border-right: 1px solid white;
-  padding-right: 15px;
-  padding-top: 30px;
+  padding-bottom: 3rem;
+  padding-top: 3rem; 
 }
 
 #strip2 span {
   font-size: 15px;
 }
 
+#strip2 a{
+  text-decoration: none;
+}
+
 #strip2 #txt {
   font-size: 19px;
+  text-decoration:none;
+  color: white;
 }
 
 #strip2 .or {
   border-radius: 50%;
   position: relative;
-  left: 93px;
-  top: -29px;
+  left: 107px;
+  top: -37px;
   background-color: #edbb0c;
   box-sizing: border-box;
   color: white;
@@ -999,7 +1028,7 @@ html {
 #strip3 {
   display: flex;
   align-items: center;
-  background-color: #edbb0c;
+  background-color: #ff3737;
   padding-left: 15px;
   width: auto;
 }
@@ -1019,7 +1048,10 @@ html {
     display: flex;
     flex-direction: column;
   }
-
+ 
+ #phone{
+   cursor: pointer;
+ }
   .order-container {
     display: flex;
     flex-direction: column;
