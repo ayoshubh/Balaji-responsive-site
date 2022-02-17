@@ -39,7 +39,7 @@
                 <a class="nav-link text-white" href="#contact">CONTACT US</a>
             </li>
             <li id="hamburger" class="nav-item  px-2" onclick="showNav()">
-                <i class="bi-2x bi-list"></i>
+                <i class="fa-solid fa-bars"></i>
             </li>
         </ul>
         <div id="mobNav">
@@ -62,39 +62,21 @@
                 <h1 class="mt-5"><Strong>WELCOME TO BALAJI RESTAURANT</Strong></h1>
                 <P class="lead ">We offer all the best quality products for an amazing start of the day.</P>
             </div>
-            <!-- <div style="text-align:center">
-                <span id="d1" class="dot" onclick="currentSlide(1)"></span>
-                <span id="d2" class="dot" onclick="currentSlide(2)"></span>
-                <span id="d3" class="dot" onclick="currentSlide(3)"></span>
-            </div> -->
         </div>
-
         <div class="mySlides">
             <div class="text pb-2"><img src="/img/Path 1985.png" alt="Balaji" height="10px" class="img-fluid"
                     loading="lazy">
                 <h1 class="mt-5"><Strong>WELCOME TO BALAJI RESTAURANT</Strong></h1>
                 <P class="lead ">We offer all the best quality products for an amazing start of the day.</P>
             </div>
-
-            <!-- <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div> -->
         </div>
-
         <div class="mySlides">
             <div class="text pb-2"><img src="/img/Path 1985.png" alt="Balaji" height="10px" class="img-fluid"
                     loading="lazy">
                 <h1 class="mt-5"><Strong>WELCOME TO BALAJI RESTAURANT</Strong></h1>
                 <P class="lead ">We offer all the best quality products for an amazing start of the day.</P>
             </div>
-            <!-- <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div> -->
-        </div>
+       </div>
 
     </div>
     <!-- <div style="text-align:center">
@@ -185,7 +167,7 @@
                 <h2 id="recipe-title">Experience the best food</h2>
             </div>
             <div class="row" id="recipe-img-block">
-                <div class="slider">
+                <div class="slider" id="large-rec">
                     <div class="slide">
                         <div class="slide-cont">
                             <div class="slide-img">
@@ -196,7 +178,6 @@
                             </div>
                             <div class="slide-desc">
                                 1Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -259,19 +240,11 @@
                 </div>
 
                 <div id="mobRec">
-                    <div class="owl-carousel owl-theme" id="mobRecCar">
-                        <div class="item">
-                            
-                        </div>
+                    <div class="owl-carousel owl-theme" id="mob-rec">
+                        <!-- Data added through Recipe json file -->
                     </div>
                 </div>
             </div>
-
-            <!-- <div id="dotr-con">
-                <span class="dot1 active"></span>
-                <span class="dot1"></span>
-                <span class="dot1"></span>
-            </div> -->
         </div>
     </section>
 
@@ -341,12 +314,6 @@
                 <!-- Code through json -->
             </div>
         </div>
-
-        <!-- <div id="dotc-con">
-            <span class="dot1 active"></span>
-            <span class="dot1"></span>
-            <span class="dot1"></span>
-        </div> -->
     </section>
 
 

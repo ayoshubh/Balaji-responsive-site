@@ -1,30 +1,31 @@
 
 $(document).ready(function () {
-    // $('#mobRecCar').owlCarousel({
-    //     center: true,
-    //     items:1,
-    //     autoplay: true,
-    //     autoplayTimeout: 5000,
-    //     dots: true,
-    // })
+    $('#mob-rec').owlCarousel({
+        loop: true,
+        items: 1,
+        autoHidth: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000
+    })
     $('#testimonial').owlCarousel({
         center: true,
         loop: true,
-        autoWidth:true,
-        autoHidth:true,
+        autoWidth: true,
+        autoHidth: true,
         autoplay: true,
         autoplayTimeout: 5000,
         dots: true,
-        responsive:{
-            0:{
-                items:1,
-                autoWidth:false
+        responsive: {
+            0: {
+                items: 1,
+                autoWidth: false
             },
-            768:{
-                items:3
+            768: {
+                items: 3
             }
         }
-    })    
+    })
 })
 
 
@@ -95,23 +96,21 @@ function chn(x) {
 }
 
 
-function commMob() {
-    
+function testiMob() {
     fetch("./json/comments.json")
         .then(response => {
             return (response.json());
         }).then(jsondata => {
             let Arr = jsondata;
             Arr.forEach(i => {
-                let ih = '<div class="testi-card"><img src="./img/Quotas.png"><p>'+i.com+'</p><div class="testi-img" style="background-image: url(./img/comm'+i.id+'.png);"></div><div class="testi-au">'+i.name+'</div><div class="testi-star">';
+                let ih = '<div class="testi-card"><img src="./img/Quotas.png"><p>' + i.com + '</p><div class="testi-img" style="background-image: url(./img/comm' + i.id + '.png);"></div><div class="testi-au">' + i.name + '</div><div class="testi-star">';
                 for (let index = 1; index <= i.rate; index++) {
                     ih += '<i class="fa-solid fa-star active"></i>'
                 }
-                for (let index = 1; index <= 5-i.rate; index++) {
+                for (let index = 1; index <= 5 - i.rate; index++) {
                     ih += '<i class="fa-solid fa-star"></i>'
                 }
                 ih += '</div></div>';
-                console.log(ih);
                 $('#testimonial').owlCarousel('add', ih).owlCarousel('update');
             });
             // let ih = '<div class="testi-card"><img src="./img/Quotas.png"><p>Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendumNulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum</p><div class="testi-img t1"></div><div class="testi-au">Joye</div><div class="testi-star"><i class="fa-solid fa-star active"></i><i class="fa-solid fa-star active"></i><i class="fa-solid fa-star active"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>' 
@@ -119,9 +118,42 @@ function commMob() {
             //
         })
 }
-commMob();
+testiMob();
 
+function recMob() {
+    fetch("./json/recipe.json")
+        .then(response => {
+            return (response.json());
+        }).then(jsondata => {
+            jsondata.forEach(i => {
+                let ih = '<div><div class="mob-rec-img"><img src="' + i.loc + '" alt="Recipe ' + i.id + '"></div><div class="mob-rec-name">' + i.name + '</div><div class="mob-rec-desc">' + i.desc + '</div></div>';
+                $('#mob-rec').owlCarousel('add', ih).owlCarousel('update');
+            });
+        })
+}
+recMob();
 
+// function recLarge() {
+//     fetch("./json/recipe.json")
+//         .then(response => {
+//             return (response.json());
+//         }).then(jsondata => {
+//             let ele = document.getElementById('large-rec');
+//             jsondata.forEach(i => {
+//                 const tempele = document.createElement('div');
+//                 tempele.className = "slide";
+//                 if (i.id == 3) {
+//                     tempele.className += " active";
+//                 }
+//                 tempele.innerHTML = '<div class="slide-cont"><div class="slide-img"><img src="'+i.loc+'" alt="Recipe '+i.id+'"></div><div class="slide-title">'+i.name+'</div><div class="slide-desc">'+i.desc+'</div></div>';
+//                 console.log(tempele);
+//                 ele.appendChild(tempele);
+                
+//             });
+//             console.log(ele);
+//         })
+// }
+// recLarge();
 
 
 let i = 0;
@@ -150,7 +182,6 @@ function currentSlide(n) {
 function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");
-    console.log(slides);
     var dots = document.getElementsByClassName("dot");
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }

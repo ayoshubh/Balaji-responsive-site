@@ -149,18 +149,32 @@ html {
 .slide.active .slide-desc, .slide.active .slide-title{
     display: block;
 }
-#recipe-img-block{
+#large-rec{
     display: block;
 }
 #mobRec{
     display: none;
 }
+.mob-rec-img img{
+    margin: auto;
+    width: 20rem !important;
+}
+.mob-rec-name{
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-top: 1.3rem;
+    margin-bottom: 0.7rem;
+}
+.mob-rec-desc{
+    font-size: 2rem;
+    color: #8A8A8A;
+    padding: 1rem 3rem 4rem;
+}
 @media (max-width:768px) {
-    #recipe-img-block{
+    #large-rec{
         display: none;
     }
     #mobRec{
-        background-color: #00DF61;
         display: block;
     }
 }
@@ -328,6 +342,7 @@ html {
     border-radius: 50%;
     border: 2px solid gray !important;
     margin-left: 6px;
+    margin-bottom: 3rem;
 }
 .owl-dots .owl-dot span{
     display: none !important;
