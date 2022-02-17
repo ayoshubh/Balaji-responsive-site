@@ -117,72 +117,52 @@ html {
     font-size: 4rem;
     margin-bottom: 7rem;
 }
-
-.image-group {
-    width: auto;
+.slider{
+    height: 370px;
+    width: 100%;
     position: relative;
-    height: auto;
-    margin-bottom: 5rem;
-    margin: auto;
+    display: block;
 }
-
-#img1 {
+.slide{
     position: absolute;
-    z-index: 1;
-    left: -24rem;
+    backface-visibility: hidden;
+    transition: .4s all;
 }
-
-#img2 {
-    position: absolute;
-    z-index: 2;
-    left: -12rem;
+.slide-cont{
+    width: 25rem;
 }
-
-#img3 {
-    z-index: 3;
-    transform: scale(1.2);
+.slide-title{
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-top: 1.3rem;
+    margin-bottom: 0.7rem;
+    display: none;
 }
-
-#img4 {
-    position: absolute;
-    z-index: 2;
-    right: -12rem;
+.slide-desc{
+    font-size: 1.5rem;
+    color: #8A8A8A;
+    display: none;
 }
-
-#img5 {
-    position: absolute;
-    z-index: 1;
-    right: -24rem;
+.slide.active{
+    z-index: 4;
 }
-
-@media (max-width : 768px) {
-    .image-group {
-        width: 100vw;
-        height: auto;
-    }
-
-    .image-group div {
-        height: 150px;
-        position: static !important;
-        left: 0;
-        height: auto;
-    }
-
-    #img2 img, #img3 img, #img4 img, #img5 img {
+.slide.active .slide-desc, .slide.active .slide-title{
+    display: block;
+}
+#recipe-img-block{
+    display: block;
+}
+#mobRec{
+    display: none;
+}
+@media (max-width:768px) {
+    #recipe-img-block{
         display: none;
     }
-}
-
-#recipe-name {
-    font-size: 2.1rem;
-    font-weight: bold;
-    padding-top: 2rem;
-}
-
-#recipe-desc {
-    font-size: 2.1rem;
-    color: #8E8E8E;
-    margin-bottom: 8rem;
+    #mobRec{
+        background-color: #00DF61;
+        display: block;
+    }
 }
 
 /* Timing CSS */
@@ -230,112 +210,13 @@ html {
 
 /* Comments Section CSS */
 #comments {
-    width: 122.5rem;
+    width: 122.5rem; 
     margin: auto;
-    padding-top: 15rem;
-    gap: 2.5rem;
-    margin-bottom: 18rem;
+    padding-top: 4rem;
+    margin-bottom: 10rem;
     position: relative;
-}
+} 
 
-#back-btn-block {
-    width: 11.5rem;
-    height: 49.5rem;
-    background-image: linear-gradient(rgba(49, 49, 49, 0.8),
-            rgba(49, 49, 49, 0.8)),
-        url(./img/comm3.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#forward-btn-block {
-    width: 11.5rem;
-    height: 49.5rem;
-    background-image: linear-gradient(rgba(49, 49, 49, 0.8),
-            rgba(49, 49, 49, 0.8)),
-        url(./img/comm2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#back-btn, #forward-btn {
-    width: 5rem;
-    height: 5rem;
-    border: 5px solid white;
-    margin: auto;
-    cursor: pointer;
-}
-
-#back-btn {
-    border-right: transparent;
-    border-bottom: transparent;
-    transform: rotate(-45deg);
-    top: 45%;
-    left: 40%;
-}
-
-#forward-btn {
-    border-left: transparent;
-    border-bottom: transparent;
-    transform: rotate(45deg);
-    top: 45%;
-    left: 20%;
-
-}
-
-.comm-block {
-    gap: 3.5rem;
-}
-
-.comm-dis {
-    align-self: center;
-}
-
-.comm-text {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-right: 13rem;
-    margin-top: 4rem;
-    margin-bottom: 6rem;
-}
-
-.comm-au {
-    font-size: 2.5rem;
-    color: #5B79DB;
-}
-
-#dotc-con {
-    position: absolute;
-    bottom: -40px;
-    display: none;
-    width: 100vw;
-    text-align: center;
-}
-
-#dotr-con {
-    position: absolute;
-    bottom: 33px;
-    display: none;
-    width: 100vw;
-}
-
-.dot1 {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0px 2px;
-    border: 2px solid gray;
-    background-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.dot1:hover {
-    background-color: #EDBB0C;
-}
 
 @media (max-width:1200px) {
     html {
@@ -352,53 +233,138 @@ html {
     }
 }
 
+.mobComm{
+    display: none;
+}
+/* .owl-dot{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    background-color: transparent;
+} */
+#testi-sec{
+    text-align: center;
+}
+#testi-sec h1{
+    margin-top: 6rem;
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+.testi-card{
+    position: relative;
+    background-color: #272727;
+    color: #8E8E8E;
+    align-items: center;
+    width: 74rem;
+    height: auto;
+    text-align: center;
+    margin-bottom: 15rem;
+    opacity: 0.3;
+    transform: scale(0.8);
+    transition: all 0.4s;
+}
+.testi-card img{
+    width: 13rem !important;
+    margin: auto;
+    padding-top: 4rem;
+}
+.testi-card p{
+    font-size: 2rem;
+    padding: 1.3rem 6rem 7.5rem;
+    margin-bottom: 0;
+}
+.testi-img{
+    position: absolute;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    background-position: top;
+    background-size: cover;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%,50%);
+    display: none;
+}
+.t1{
+    background-image: url(./img/comm1.png);
+}
+.t2{
+    background-image: url(./img/comm2.png);
+}
+.testi-au{
+    position: absolute;
+    color: #5B79DB;
+    font-size: 2.7rem;
+    font-weight: bold;
+    left: 50%;
+    bottom: -10rem;
+    transform: translatex(-50%);
+    display: none;
+}
+.testi-star{
+    display: none;
+    position: absolute;
+    font-size: 2rem;
+    left: 50%;
+    bottom: -12.5rem;
+    transform: translatex(-50%);
+}
+.testi-star .active{
+    color: #00DF61;
+}
+#testimonial .owl-item.active.center .testi-card{
+    transform: scale(1);
+}
+#testimonial .owl-item.active.center .testi-card{
+    opacity: 1;
+}
+#testimonial .owl-item.active.center .testi-img, #testimonial .owl-item.active.center .testi-au,#testimonial .owl-item.active.center .testi-star{
+    display: block;
+}
+.owl-dots .owl-dot{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid gray !important;
+    margin-left: 6px;
+}
+.owl-dots .owl-dot span{
+    display: none !important;
+}
+.owl-dots .owl-dot.active{
+    background-color: #EDBB0C !important;
+}
+
 @media (max-width:768px) {
     #comments {
         padding-top: 7rem;
     }
-
-    .comm-block {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
+    .testi-card img{
+        width: 7rem !important;
+    }
+    .testi-card{
+        width: 40rem;
+        margin: auto;
+        margin-bottom: 14rem;
+    }
+    .testi-img{
+        width: 10rem;
+        height: 10rem;
+    }
+    .testi-au{
+        bottom: -9rem;
+    }
+    .testi-star{
+        bottom: -11.5rem;
     }
 
-    .comm-img {
-        width: 20rem;
-    }
 
-    .comm-dis {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .comm-text {
-        margin-top: 1rem;
-        padding-left: 10rem;
-        padding-right: 10rem;
-        text-align: center;
-        margin-right: 0;
-        margin-bottom: 2rem;
-    }
-
-    #quotas {
-        width: 30px;
-    }
-
-    #back-btn-block {
+    .largeComm{
         display: none;
     }
-
-    #forward-btn-block {
+    .mobComm{
         display: none;
-    }
-    #dotc-con {
-        display: block;
-    }
-    
-    #dotr-con {
-        display: block;
     }
 }
 
@@ -565,7 +531,7 @@ html {
 .slideshow-container {
     max-width: 2000px;
     position: relative;
-   
+   padding: 0;
 }
 
 
@@ -585,6 +551,7 @@ html {
     background-image: url("/img/Group 36.png");
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 0;
 }
 
 /* Caption text */
@@ -627,7 +594,7 @@ html {
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.dot.active, .dot:hover {
     background-color: #EDBB0C;
 }
 
@@ -758,13 +725,6 @@ html {
     background-color: #EDBB0C;
     color: white;
     font-weight: 500;
-}
-.div1{
-    position: relative;
-    transition: 0.5s;
-}
-.div1:hover{
-    transform: scale(1.05);
 }
 
 /* .galHov{

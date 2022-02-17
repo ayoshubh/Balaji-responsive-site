@@ -1,18 +1,27 @@
-$(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
-        dots:true,
+
+$(document).ready(function () {
+    // $('#mobRecCar').owlCarousel({
+    //     center: true,
+    //     items:1,
+    //     autoplay: true,
+    //     autoplayTimeout: 5000,
+    //     dots: true,
+    // })
+    $('#testimonial').owlCarousel({
+        center: true,
+        loop: true,
+        autoWidth:true,
+        autoHidth:true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        dots: true,
         responsive:{
             0:{
-                items:1
+                items:1,
+                autoWidth:false
             },
-            600:{
+            768:{
                 items:3
-            },
-            1000:{
-                items:5
             }
         }
     })    
@@ -25,7 +34,7 @@ function chn(x) {
         let x = Number.parseInt(imgStr[imgStr.length - 5]);
         let cArr;
         let forNo, prNo, backNo;
-        fetch("./comments.json")
+        fetch("./json/comments.json")
             .then(response => {
                 return (response.json());
             }).then(jsondata => {
@@ -57,7 +66,7 @@ function chn(x) {
         let cArr;
         let forNo, prNo, backNo;
 
-        fetch("./comments.json")
+        fetch("./json/comments.json")
             .then(response => {
                 return (response.json());
             }).then(jsondata => {
@@ -85,6 +94,32 @@ function chn(x) {
     }
 }
 
+
+function commMob() {
+    
+    fetch("./json/comments.json")
+        .then(response => {
+            return (response.json());
+        }).then(jsondata => {
+            let Arr = jsondata;
+            Arr.forEach(i => {
+                let ih = '<div class="testi-card"><img src="./img/Quotas.png"><p>'+i.com+'</p><div class="testi-img" style="background-image: url(./img/comm'+i.id+'.png);"></div><div class="testi-au">'+i.name+'</div><div class="testi-star">';
+                for (let index = 1; index <= i.rate; index++) {
+                    ih += '<i class="fa-solid fa-star active"></i>'
+                }
+                for (let index = 1; index <= 5-i.rate; index++) {
+                    ih += '<i class="fa-solid fa-star"></i>'
+                }
+                ih += '</div></div>';
+                console.log(ih);
+                $('#testimonial').owlCarousel('add', ih).owlCarousel('update');
+            });
+            // let ih = '<div class="testi-card"><img src="./img/Quotas.png"><p>Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendumNulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum</p><div class="testi-img t1"></div><div class="testi-au">Joye</div><div class="testi-star"><i class="fa-solid fa-star active"></i><i class="fa-solid fa-star active"></i><i class="fa-solid fa-star active"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>' 
+            // console.log(ih);
+            //
+        })
+}
+commMob();
 
 
 
@@ -158,3 +193,88 @@ function chnGal(a) {
         meal.style.display = "grid";
     }
 }
+
+
+
+var Slider = function () {
+    var total, $slide, $slider, sliderWidth, increment = 100;
+    var on = function () {
+        $slider = $('.slider');
+        $slide = $('.slide');
+        sliderWidth = $slider.width();
+        total = $slide.length;
+        position();
+    }
+
+    var position = function () {
+        var sign, half = $('.active').index(), x = 0, z = 0, zindex, scaleX = 1.3, scaleY = 1.3, transformOrigin;
+        $slide.each(function (index, element) {
+            scaleX = scaleY = 1;
+            transformOrigin = sliderWidth / 2;
+            if (index < half) {
+                sign = 1;
+                zindex = index + 1;
+                x = sliderWidth / 2 - increment * (half - index + 1);
+                z = -increment * (half - index + 1);
+            } else if (index > half) {
+                sign = -1
+                zindex = total - index;
+                x = sliderWidth / 2 + increment * (index - half + 1);
+                z = -increment * (index - half + 1);
+            } else {
+                sign = 0;
+                zindex = total;
+                x = sliderWidth / 2;
+                z = 1;
+                scaleX = scaleY = 1.2;
+                transformOrigin = 'initial';
+            }
+            $(element).css(
+                {
+                    'transform': 'translate3d(' + calculateX(x, sign, 300) + 'px, 0,' + z + 'px) scale3d(' + scaleX + ',' + scaleY + ', 1)',
+                    'z-index': zindex,
+                    'transform-origin-x': transformOrigin
+                }
+            );
+        });
+    };
+
+    var calculateX = function (position, sign, width) {
+        switch (sign) {
+            case 1:
+            case 0: return position - width / 2;
+            case -1: return position - width / 2;
+        }
+    }
+
+    var imageSize = function () {
+        return $slider.width() / 3;
+    }
+
+    var recalculateSizes = function () {
+        sliderWidth = $slider.width();
+        position();
+    }
+
+    var clickedImage = function () {
+        $('.active').removeClass('active');
+        $(this).addClass('active');
+        position();
+    }
+
+    var addEvents = function () {
+        $(window).resize(recalculateSizes);
+        $(document).on('click', '.slide', clickedImage);
+    }
+
+    return {
+        init: function () {
+            on();
+            addEvents();
+        }
+    };
+}();
+
+$(function () {
+    var slider = Slider.init();
+})

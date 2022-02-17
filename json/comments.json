@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "name":"Sweta Tripathi",
+        "com":"I tried live Khazana with mint. It was awesome",
+        "rate":3
+    },
+    {
+        "id":2,
+        "name":"Rose Geller",
+        "com":"I tried Pasta and it was awesome",
+        "rate":2
+    },
+    {
+        "id":3,
+        "name":"Rachel Green",
+        "com":"I tried Soup and it was awesome",
+        "rate":5
+    },
+    {
+        "id":4,
+        "name":"Joey Tribbian",
+        "com":"I tried Pizza and it was awesome",
+        "rate":3
+    },
+    {
+        "id":5,
+        "name":"Chandler bing",
+        "com":"I tried Chicken and it was awesome",
+        "rate":4
+    }
+]
