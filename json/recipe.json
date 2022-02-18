@@ -1,31 +1,31 @@
 [
     {
         "id":1,
-        "loc":"./img/rec1.png",
+        "loc":"./img/rec1.webp",
         "name":"Recipe 1 name",
         "desc":"1Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum"
     },
     {
         "id":2,
-        "loc":"./img/rec2.png",
+        "loc":"./img/rec2.webp",
         "name":"Recipe 2 name",
         "desc":"2Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum"
     },
     {
         "id":3,
-        "loc":"./img/rec3.png",
+        "loc":"./img/rec3.webp",
         "name":"Recipe 3 name",
         "desc":"3Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum"
     },
     {
         "id":4,
-        "loc":"./img/rec4.png",
+        "loc":"./img/rec4.webp",
         "name":"Recipe 4 name",
         "desc":"4Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum"
     },
     {
         "id":5,
-        "loc":"./img/rec5.png",
+        "loc":"./img/rec5.webp",
         "name":"Recipe 5 name",
         "desc":"5Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum"
     }

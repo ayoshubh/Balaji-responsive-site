@@ -30,74 +30,6 @@ $(document).ready(function () {
     $('#large-rec').hiSlide({});
 })
 
-
-function chn(x) {
-    if (x == 1) {
-        let imgStr = document.getElementsByClassName('comm-img')[0].src;
-        let x = Number.parseInt(imgStr[imgStr.length - 5]);
-        let cArr;
-        let forNo, prNo, backNo;
-        fetch("./json/comments.json")
-            .then(response => {
-                return (response.json());
-            }).then(jsondata => {
-                cArr = jsondata;
-                cl = cArr.length;
-                if (x == cl) {
-                    prNo = 1;
-                    backNo = cArr[cl - 1].id;
-                    forNo = prNo + 1;
-                } else {
-                    prNo = x + 1;
-                    backNo = prNo - 1;
-                    if (prNo === cl) {
-                        forNo = 1;
-                    } else { forNo = prNo + 1; }
-                }
-
-                document.getElementsByClassName('comm-img')[0].src = "./img/comm" + prNo + ".png";
-                document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
-                document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
-
-                document.getElementsByClassName('comm-au')[0].innerText = cArr[prNo - 1].name;
-                document.getElementsByClassName('comm-text')[0].innerText = cArr[prNo - 1].com;
-            });
-    }
-    if (x == -1) {
-        let imgStr = document.getElementsByClassName('comm-img')[0].src;
-        let x = Number.parseInt(imgStr[imgStr.length - 5]);
-        let cArr;
-        let forNo, prNo, backNo;
-
-        fetch("./json/comments.json")
-            .then(response => {
-                return (response.json());
-            }).then(jsondata => {
-                cArr = jsondata;
-                cl = cArr.length;
-                if (x === cArr[0].id) {
-                    prNo = cl;
-                    backNo = prNo - 1;
-                    forNo = 1;
-                } else {
-                    prNo = x - 1;
-                    if (prNo === cArr[0].id) {
-                        backNo = cl;
-                    } else { backNo = prNo + 1; }
-                    forNo = prNo + 1;
-                }
-                document.getElementsByClassName('comm-img')[0].src = "./img/comm" + prNo + ".png";
-                document.getElementById('back-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + backNo + ".png)";
-                document.getElementById('forward-btn-block').style.backgroundImage = "linear-gradient(rgba(49, 49, 49, 0.8),rgba(49, 49, 49, 0.8)),url(./img/comm" + forNo + ".png)";
-
-                document.getElementsByClassName('comm-au')[0].innerText = cArr[prNo - 1].name;
-                document.getElementsByClassName('comm-text')[0].innerText = cArr[prNo - 1].com;
-            });
-
-    }
-}
-
-
 function testiMob() {
     fetch("./json/comments.json")
         .then(response => {
@@ -170,9 +102,6 @@ function showNav() {
 var slideIndex = 1;
 showSlides(slideIndex);
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
 
 function currentSlide(n) {
     showSlides(slideIndex = n);
@@ -186,17 +115,16 @@ function showSlides(n) {
     if (n < 1) { slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+        slides[i].className = slides[i].className.replace(" fade", "");
     }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[slideIndex - 1].style.display = "block";
-    //dots[slideIndex - 1].className += " active";
+    slides[slideIndex - 1].className += " fade";
+    dots[slideIndex - 1].className += " active";
 }
-document.getElementById('recipe-img-block').addEventListener('click', e => {
-    e.preventDefault();
-    console.log("Hello")
-})
+
 
 const all = document.getElementById('gallery-all');
 const snack = document.getElementById('gallery-snack');
@@ -223,88 +151,3 @@ function chnGal(a) {
         meal.style.display = "grid";
     }
 }
-
-
-
-var Slider = function () {
-    var total, $slide, $slider, sliderWidth, increment = 100;
-    var on = function () {
-        $slider = $('.slider');
-        $slide = $('.slide');
-        sliderWidth = $slider.width();
-        total = $slide.length;
-        position();
-    }
-
-    var position = function () {
-        var sign, half = $('.active').index(), x = 0, z = 0, zindex, scaleX = 1.3, scaleY = 1.3, transformOrigin;
-        $slide.each(function (index, element) {
-            scaleX = scaleY = 1;
-            transformOrigin = sliderWidth / 2;
-            if (index < half) {
-                sign = 1;
-                zindex = index + 1;
-                x = sliderWidth / 2 - increment * (half - index + 1);
-                z = -increment * (half - index + 1);
-            } else if (index > half) {
-                sign = -1
-                zindex = total - index;
-                x = sliderWidth / 2 + increment * (index - half + 1);
-                z = -increment * (index - half + 1);
-            } else {
-                sign = 0;
-                zindex = total;
-                x = sliderWidth / 2;
-                z = 1;
-                scaleX = scaleY = 1.2;
-                transformOrigin = 'initial';
-            }
-            $(element).css(
-                {
-                    'transform': 'translate3d(' + calculateX(x, sign, 300) + 'px, 0,' + z + 'px) scale3d(' + scaleX + ',' + scaleY + ', 1)',
-                    'z-index': zindex,
-                    'transform-origin-x': transformOrigin
-                }
-            );
-        });
-    };
-
-    var calculateX = function (position, sign, width) {
-        switch (sign) {
-            case 1:
-            case 0: return position - width / 2;
-            case -1: return position - width / 2;
-        }
-    }
-
-    var imageSize = function () {
-        return $slider.width() / 3;
-    }
-
-    var recalculateSizes = function () {
-        sliderWidth = $slider.width();
-        position();
-    }
-
-    var clickedImage = function () {
-        $('.active').removeClass('active');
-        $(this).addClass('active');
-        position();
-    }
-
-    var addEvents = function () {
-        $(window).resize(recalculateSizes);
-        $(document).on('click', '.slide', clickedImage);
-    }
-
-    return {
-        init: function () {
-            on();
-            addEvents();
-        }
-    };
-}();
-
-$(function () {
-    var slider = Slider.init();
-})
