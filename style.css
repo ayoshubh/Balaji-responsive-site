@@ -11,6 +11,7 @@ html {
   padding: 0;
 }
 
+
 :root {
   --perFontFam: "Vivaldi";
   --perFontSize: 3.5rem;
@@ -117,31 +118,19 @@ html {
   font-size: 4rem;
   margin-bottom: 7rem;
 }
-.slider{
-    height: 370px;
-    width: 100%;
-    position: relative;
-    display: block;
-}
-.slide{
-    position: absolute;
-    backface-visibility: hidden;
-    transition: .4s all;
-}
 .slide-cont{
     width: 25rem;
+    text-align: center;
 }
 .slide-title{
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-top: 1.3rem;
     margin-bottom: 0.7rem;
-    display: none;
 }
 .slide-desc{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #8A8A8A;
-    display: none;
 }
 .slide.active{
     z-index: 4;
@@ -405,14 +394,7 @@ html {
   max-width: 56.5rem;
   z-index:10;
   left: 20%;
-  right: 20%; 
-
-  /* left:33vw; */
-  /* margin: auto; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center; */
+  right: 20%;
   margin-top: 7rem;
   margin-bottom: 10rem;
   font-size: 2rem;
@@ -420,7 +402,9 @@ html {
 }
 iframe{
   position: relative;
-
+  filter: invert(1) hue-rotate(180deg);
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 #phone{
@@ -567,7 +551,7 @@ iframe{
 
 .slideshow-container {
     position: relative;
-   padding: 0;
+    padding: 0;
 }
 
 .next {

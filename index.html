@@ -13,6 +13,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="./css/jquery.hislide.css">
     <link rel="stylesheet" href="./style.css" />
 
     <title>Balaji Restaurant</title>
@@ -76,7 +77,7 @@
                 <h1 class="mt-5"><Strong>WELCOME TO BALAJI RESTAURANT</Strong></h1>
                 <P class="lead ">We offer all the best quality products for an amazing start of the day.</P>
             </div>
-       </div>
+        </div>
 
     </div>
     <!-- <div style="text-align:center">
@@ -105,10 +106,10 @@
                     <b>Click to order on</b>
                 </span>
                 <div id="svgContainer" class="d-flex py-5 align-items-center">
-                    <a href="http://zoma.to/r/18812052" class="mx-5" target=" _blank">
+                    <a href="http://zoma.to/r/18812052" class="ms-4" target=" _blank">
                         <img src="/img/zomato.png" alt="zomato" style="width: 5rem;">
                     </a>
-                    <a href="https://www.swiggy.com/restaurants/balaji-restaurant-gotri-vadodara-408518" class="mx-5"
+                    <a href="https://www.swiggy.com/restaurants/balaji-restaurant-gotri-vadodara-408518" class="mx-4"
                         target=" _blank">
                         <img src="/img/swiggy.png" alt="swiggy" style="width: 5rem;">
                     </a>
@@ -174,77 +175,83 @@
             <div class="row">
                 <h2 id="recipe-title">Experience the best food</h2>
             </div>
-            <div class="row" id="recipe-img-block">
-                <div class="slider" id="large-rec">
-                    <div class="slide">
-                        <div class="slide-cont">
-                            <div class="slide-img">
-                                <img src="./img/rec1.png" alt="Recipe 1">
+            <div class="row justify-content-center" id="recipe-img-block">
+                <div class="hi-slide" id="large-rec">
+                    <!-- <div class="hi-prev"></div>
+                    <div class="hi-next"></div> -->
+
+                    <ul id="rec-slide-list">
+                        <li>
+                            <div class="slide-cont">
+                                <div class="slide-img">
+                                    <img src="./img/rec1.png" alt="Recipe 1">
+                                </div>
+                                <div class="slide-title">
+                                    Recipe 1 Name
+                                </div>
+                                <div class="slide-desc">
+                                    1Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui
+                                    bibendum
+                                </div>
                             </div>
-                            <div class="slide-title">
-                                1Recipe Name
+                        </li>
+                        <li>
+                            <div class="slide-cont">
+                                <div class="slide-img">
+                                    <img src="./img/rec2.png" alt="Recipe 1">
+                                </div>
+                                <div class="slide-title">
+                                    Recipe 2 Name
+                                </div>
+                                <div class="slide-desc">
+                                    2Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui
+                                    bibendum
+                                </div>
                             </div>
-                            <div class="slide-desc">
-                                1Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum
+                        </li>
+                        <li>
+                            <div class="slide-cont">
+                                <div class="slide-img">
+                                    <img src="./img/rec3.png" alt="Recipe 1">
+                                </div>
+                                <div class="slide-title">
+                                    Recipe 3 Name
+                                </div>
+                                <div class="slide-desc">
+                                    3Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui
+                                    bibendum
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide-cont">
-                            <div class="slide-img">
-                                <img src="./img/rec2.png" alt="Recipe 1">
+                        </li>
+                        <li>
+                            <div class="slide-cont">
+                                <div class="slide-img">
+                                    <img src="./img/rec4.png" alt="Recipe 1">
+                                </div>
+                                <div class="slide-title">
+                                    Recipe 4 Name
+                                </div>
+                                <div class="slide-desc">
+                                    4Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui
+                                    bibendum
+                                </div>
                             </div>
-                            <div class="slide-title">
-                                2Recipe Name
+                        </li>
+                        <li>
+                            <div class="slide-cont">
+                                <div class="slide-img">
+                                    <img src="./img/rec5.png" alt="Recipe 1">
+                                </div>
+                                <div class="slide-title">
+                                    Recipe 5 Name
+                                </div>
+                                <div class="slide-desc">
+                                    5Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui
+                                    bibendum
+                                </div>
                             </div>
-                            <div class="slide-desc">
-                                2Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide active">
-                        <div class="slide-cont">
-                            <div class="slide-img">
-                                <img src="./img/rec3.png" alt="Recipe 1">
-                            </div>
-                            <div class="slide-title">
-                                3Recipe Name
-                            </div>
-                            <div class="slide-desc">
-                                3Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide-cont">
-                            <div class="slide-img">
-                                <img src="./img/rec4.png" alt="Recipe 1">
-                            </div>
-                            <div class="slide-title">
-                                4Recipe Name
-                            </div>
-                            <div class="slide-desc">
-                                4Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide-cont">
-                            <div class="slide-img">
-                                <img src="./img/rec5.png" alt="Recipe 1">
-                            </div>
-                            <div class="slide-title">
-                                5Recipe Name
-                            </div>
-                            <div class="slide-desc">
-                                5Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
 
                 <div id="mobRec">
@@ -440,7 +447,7 @@
         <div class="row" style="position: relative; ">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1845.6234034107329!2d73.14471257327146!3d22.306503804512506!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x48a5c377232f95e9!2sBalaji%20Restaurant!5e0!3m2!1sen!2sin!4v1645078565873!5m2!1sen!2sin"
-                width="600" height="450" allowfullscreen="" loading=" lazy">
+                width="600" height="450" allowfullscreen="" loading=" lazy" >
             </iframe>
             <div class="container justify-content-center" id="contact-box">
                 <div class="row justify-content-center">
@@ -462,8 +469,8 @@
                         <img src="./img/call.png" style="max-width: 15px;">
                     </div>
                     <div class="col-auto col-md-auto">
-                        +91 97277 79511 </span>
-                        </a>
+                        <a id="phone" href="tel:+91 9727779511" style="text-decoration: inherit; color: inherit;">+91
+                            97277 79511</a>
                     </div>
                 </div>
                 <div class=" row justify-content-center my-4">
@@ -471,7 +478,8 @@
                         <img src="./img/mail.png" style="max-width: 15px;">
                     </div>
                     <div class="col-auto col-md-auto">
-                        info@balajirestaurant.in
+                        <a href="mailto:info@balajirestaurant.in"
+                            style="text-decoration: inherit; color: inherit;">info@balajirestaurant.in</a>
                     </div>
                 </div>
                 <div style="width: 100%;">
@@ -498,13 +506,13 @@
                     <a class="nav-link text-black txt" aria-current="page" href="#"><small>HOME</small></a>
                 </li>
                 <li class="nav-item  px-2">
-                    <a class="nav-link text-black txt" href="#"><small>ABOUT US</small></a>
+                    <a class="nav-link text-black txt" href="#about-us"><small>ABOUT US</small></a>
                 </li>
                 <li class="nav-item  px-2">
-                    <a class="nav-link text-black txt" href="#"><small>GALLERY</small></a>
+                    <a class="nav-link text-black txt" href="#header"><small>GALLERY</small></a>
                 </li>
                 <li class="nav-item  px-2">
-                    <a class="nav-link text-black txt" href="#"><small>CONTACT US</small></a>
+                    <a class="nav-link text-black txt" href="#contact"><small>CONTACT US</small></a>
                 </li>
             </ul>
             <div class="container">
@@ -524,6 +532,7 @@
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./js/fslightbox.js"></script>
+    <script src="./js/jquery.hislide.js"></script>
     <!-- Owl Carousel -->
     <script src="./app.js"></script>
 

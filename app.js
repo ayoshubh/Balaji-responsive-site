@@ -26,6 +26,8 @@ $(document).ready(function () {
             }
         }
     })
+    // console.log(recLarge()); 
+    $('#large-rec').hiSlide({});
 })
 
 
@@ -138,13 +140,9 @@ recMob();
 //         .then(response => {
 //             return (response.json());
 //         }).then(jsondata => {
-//             let ele = document.getElementById('large-rec');
+//             let ele = document.getElementById('rec-slide-list');
 //             jsondata.forEach(i => {
-//                 const tempele = document.createElement('div');
-//                 tempele.className = "slide";
-//                 if (i.id == 3) {
-//                     tempele.className += " active";
-//                 }
+//                 const tempele = document.createElement('li');
 //                 tempele.innerHTML = '<div class="slide-cont"><div class="slide-img"><img src="'+i.loc+'" alt="Recipe '+i.id+'"></div><div class="slide-title">'+i.name+'</div><div class="slide-desc">'+i.desc+'</div></div>';
 //                 console.log(tempele);
 //                 ele.appendChild(tempele);
@@ -152,8 +150,9 @@ recMob();
 //             });
 //             console.log(ele);
 //         })
+//         return 12;
 // }
-// recLarge();
+
 
 
 let i = 0;
