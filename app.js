@@ -148,3 +148,4 @@ function chnGal(a) {
         meal.style.display = "grid";
     }
 }
+
