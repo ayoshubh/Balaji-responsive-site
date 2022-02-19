@@ -1,32 +1,51 @@
 [
     {
         "id":1,
-        "name":"Sweta Tripathi",
-        "com":"I tried live Khazana with mint. It was awesome",
-        "rate":3
+        "loc":"./img/comm1.webp",
+        "name":"Kshitiz Saxena",
+        "com":"This place has nice ambiance with a variety of good food. I usually visit this place at least once a week and always love the food. Prices also good.",
+        "rate":5
     },
     {
         "id":2,
-        "name":"Rose Geller",
-        "com":"I tried Pasta and it was awesome",
-        "rate":2
+        "loc":"./img/comm2.webp",
+        "name":"Pankaj Patel",
+        "com":"Lovely interior .Lovely food served by lovely staff . Worth visiting .go for it . You will not regret . I am sure you will visit again and will bring yr friends too.",
+        "rate":4
     },
     {
         "id":3,
-        "name":"Rachel Green",
-        "com":"I tried Soup and it was awesome",
+        "loc":"./img/comm3.webp",
+        "name":"Bhakti",
+        "com":"Amazing food with lovely presentation. Excellent environment, friendly service, great menu choices and really decent food at affordable prices.",
         "rate":5
     },
     {
         "id":4,
-        "name":"Joey Tribbian",
-        "com":"I tried Pizza and it was awesome",
-        "rate":3
+        "loc":"./img/comm4.webp",
+        "name":"Himcrown",
+        "com":"Quality food and friendly, courteous staff makes dining experience enjoyable. Have tried Punjabi and Chinese menu options. Ambiance is cool.",
+        "rate":5
     },
     {
         "id":5,
-        "name":"Chandler bing",
-        "com":"I tried Chicken and it was awesome",
-        "rate":4
+        "loc":"./img/comm5.webp",
+        "name":"Rudra Shastri",
+        "com":"I visit this restaurant quite often😅 I generally like everything here but my most loved is The Tandoor Platter, Manchurian Dry and Biriyani. Punjabi is also satisfactory. This place is really pocket friendly, you can surely visit for great food.",
+        "rate":5
+    },
+    {
+        "id":6,
+        "loc":"./img/comm6.webp",
+        "name":"Nishant Jha",
+        "com":"Absolutely fabulous food. Everyone in the family loved it. And as always, quick delivery by Zomato. 100% recommended.",
+        "rate":5
+    },
+    {
+        "id":7,
+        "loc":"./img/comm7.webp",
+        "name":"Prakash Parekh",
+        "com":"A restaurant is well in management, hospitality and food quality. Taste of foods is good. Good Space for Family and social gathering.",
+        "rate":3
     }
 ]
