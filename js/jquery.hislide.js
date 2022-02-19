@@ -9,10 +9,10 @@
         $.extend(true, setting, options);
         var states = [
             // { $zIndex: 1, width: 120, height: 120, top: 69, left: 134, $opacity: 1 },
-            { $zIndex: 1, width: 250, height: 350, top: 0, left: 0, $opacity: 1 },
-            { $zIndex: 2, width: 250, height: 350, top: 0, left: 130, $opacity: 1 },
-            { $zIndex: 3, width: 250, height: 350, top: 0, left: 240, $opacity: 1 },
-            { $zIndex: 2, width: 250, height: 350, top: 0, left: 380, $opacity: 1 },
+            { $zIndex: 2, width: 250, height: 350, top: 0, left: 0, $opacity: 1 },
+            { $zIndex: 3, width: 250, height: 350, top: 0, left: 130, $opacity: 1 },
+            { $zIndex: 4, width: 250, height: 350, top: 0, left: 240, $opacity: 1 },
+            { $zIndex: 3, width: 250, height: 350, top: 0, left: 380, $opacity: 1 },
             { $zIndex: 1, width: 250, height: 350, top: 0, left: 520, $opacity: 1 },
             // { $zIndex: 1, width: 120, height: 120, top: 69, left: 500, $opacity: 1 }
         ];
@@ -41,8 +41,8 @@
                 var state = states[index];
                 $(element).css('zIndex', state.$zIndex).finish().animate(state, setting.speed).find('.slide-title,.slide-desc').css('opacity', 0);
                 //$(element).find('').css('opacity', 0);
-                for (let i = 1; i <= 3; i++) {
-                    if(state.$zIndex === 3){
+                for (let i = 1; i <= 4; i++) {
+                    if(state.$zIndex === 4){
                         $(element).find('.slide-title,.slide-desc').css('opacity', 1);
                     }
                     

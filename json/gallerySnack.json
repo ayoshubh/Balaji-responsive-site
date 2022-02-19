@@ -1,0 +1,41 @@
+[
+    {
+      "div":"div1",
+      "image": "/img/gallery1.png",
+      "dish": "Masala Dosa"
+    },
+    {
+      "div":"div2",
+      "image": "/img/gallery3.png",
+      "dish": "Roti Tandoori"
+    },
+    {
+      "div":"div3",
+      "image": "/img/gallery4.png",
+      "dish": "Burger"
+    },
+    {
+      "div":"div4",
+      "image": "/img/gallery4.png",
+      "dish": "Burger"
+    },{
+        "div":"div5",
+        "image": "/img/gallery1.png",
+        "dish": "Masala Dosa"
+      },
+      {
+        "div":"div6",
+        "image": "/img/gallery3.png",
+        "dish": "Roti Tandoori"
+      },
+      {
+        "div":"div7",
+        "image": "/img/gallery4.png",
+        "dish": "Burger"
+      },
+      {
+        "div":"div8",
+        "image": "/img/gallery4.png",
+        "dish": "Burger"
+      }
+  ]
