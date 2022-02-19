@@ -149,3 +149,80 @@ function chnGal(a) {
     }
 }
 
+
+// Gallery 
+
+let http = new XMLHttpRequest();
+http.open('get', 'galleryAll.json', true);
+http.send();
+http.onload = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    let products = JSON.parse(this.responseText);
+    let outputSnack = "";
+    let output = "";
+    for (let item of products) {
+      output += `<div class="${item.div}">
+
+      <a data-fslightbox="gallery" href="${item.image}">
+        <img src="${item.image}" alt="" class="img-fluid" loading=" lazy">
+        <div class="action">
+        ${item.dish}
+        </div>
+        </a>
+      
+    </div>`;
+    }
+    document.querySelector("#gallery-all").innerHTML = output 
+  };
+
+}
+
+let http2 = new XMLHttpRequest();
+http2.open('get', 'gallerySnack.json', true);
+http2.send();
+http2.onload = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    let products = JSON.parse(this.responseText);
+    // let outputSnack = "";
+    let output = "";
+    for (let item of products) {
+      output += `<div class="${item.div}">
+
+      <a data-fslightbox="gallery" href="${item.image}">
+        <img src="${item.image}" alt="" class="img-fluid" loading=" lazy">
+        <div class="action">
+        ${item.dish}
+        </div>
+        </a>
+      
+    </div>`;
+    }
+    document.querySelector("#gallery-snack").innerHTML = output 
+  };
+
+}
+
+let http3 = new XMLHttpRequest();
+http3.open('get', 'galleryMeal.json', true);
+http3.send();
+http3.onload = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    let products = JSON.parse(this.responseText);
+    let output = "";
+    for (let item of products) {
+      output += `<div class="${item.div}">
+
+      <a data-fslightbox="gallery" href="${item.image}">
+        <img src="${item.image}" alt="" class="img-fluid" loading=" lazy">
+        <div class="action">
+        ${item.dish}
+        </div>
+        </a>
+      
+    </div>`;
+    }
+    document.querySelector("#gallery-meal").innerHTML = output 
+  };
+
+}
+
