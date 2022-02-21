@@ -5,15 +5,17 @@ $(document).ready(function () {
         loop: true,
         items: 1,
         dots: true,
-        margin:-300,
+        
         // autoplay: true,
         // autoplayTimeout: 5000,
         responsive:{
             0:{
-                items:1
+                items:1,
+                margin: -20,
             },
             768:{
                 items:3,
+                margin:-300,
             }
         }
     })
