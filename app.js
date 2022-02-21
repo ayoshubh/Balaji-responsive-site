@@ -6,8 +6,9 @@ $(document).ready(function () {
         items: 1,
         dots: true,
         
-        // autoplay: true,
-        // autoplayTimeout: 5000,
+        
+        autoplay: true,
+        autoplayTimeout: 5000,
         responsive:{
             0:{
                 items:1,
