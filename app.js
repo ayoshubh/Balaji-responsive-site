@@ -8,7 +8,7 @@ $(document).ready(function () {
         
         
         autoplay: true,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 4000,
         responsive:{
             0:{
                 items:1,
@@ -16,7 +16,7 @@ $(document).ready(function () {
             },
             768:{
                 items:3,
-                margin:-300,
+                margin:-320,
             }
         }
     })
@@ -34,7 +34,8 @@ $(document).ready(function () {
                 autoWidth: false
             },
             768: {
-                items: 3
+                items: 3,
+                
             }
         }
     })

@@ -111,13 +111,13 @@ html {
 #recipe-pretext {
   font-size: var(--perFontSize);
   font-family: var(--perFontFam);
-  margin-top: 7rem;
+  margin-top: 3rem;
 }
 
-#recipe-title {
+#recipe-title{
   margin-top: -20px;
   font-size: 4rem;
-  margin-bottom: 7rem;
+  /* margin-bottom: 7rem; */
 }
 
 .slide-cont {
@@ -150,13 +150,14 @@ html {
 }
 
 #mobRec {
-  width: 85rem;
+  width: 87rem;
   display: block;
 }
 
 .mob-rec-img img {
   margin: auto;
-  width: 20rem !important;
+  padding: 1rem;
+  width: 20.5rem !important;
 }
 
 .mob-rec-name {
@@ -170,13 +171,13 @@ html {
 .mob-rec-desc {
   font-size: 2rem;
   color: #8A8A8A;
-  padding: 1rem 3rem 4rem;
+  padding: 1rem 4rem 0rem;
   display: none;
 }
 
 #mobRec .owl-item {
   transform: translate3d(0, 0, 0); /* DO NOT REMEMBER WHERE TU PUT THIS, SEARCH FOR 3D ACCELERATION */
-  margin: 50px 0; /* OVERWRITE PLUGIN MARGIN */
+  margin: 50px 0px; /* OVERWRITE PLUGIN MARGIN */
 }
 
 #mobRec .owl-item img {
@@ -188,6 +189,7 @@ html {
   -webkit-transform: scale(0.80);
   -ms-transform: scale(0.80);
   transform: scale(0.80);
+  
 }
 
 #mobRec .owl-item.center img {
@@ -202,6 +204,7 @@ html {
 
 #mobRec .owl-item.active.center .mob-rec-name, #mobRec .owl-item.active.center .mob-rec-desc {
   display: block;
+  
 }
 @media (max-width:768px) {
   #large-rec {
@@ -879,6 +882,7 @@ div[class^='div'] .action {
   align-items: center;
   opacity: 0;
   transition: 0.5s;
+  
 }
 
 div[class^='div']:hover .action {
