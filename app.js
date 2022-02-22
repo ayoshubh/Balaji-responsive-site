@@ -151,32 +151,33 @@ function showSlides(n) {
 }
 
 
-const all = document.getElementById('gallery-all');
-const snack = document.getElementById('gallery-snack');
-const meal = document.getElementById('gallery-meal');
+// const all = document.getElementById('gallery-all');
+// const snack = document.getElementById('gallery-snack');
+// const meal = document.getElementById('gallery-meal');
 
-function chnGal(a) {
-    let btns = document.getElementsByClassName("button");
-    console.log(btns);
-    for (let index = 0; index < btns.length; index++) {
-        btns[index].className = btns[index].className.replace(' gal-btn-active', '');
-    }
-    btns[a].className += ' gal-btn-active';
-    if (a === 0) {
-        all.style.display = "grid";
-        snack.style.display = "none";
-        meal.style.display = "none";
-    } else if (a === 1) {
-        all.style.display = "none";
-        snack.style.display = "grid";
-        meal.style.display = "none";
-    } else if (a === 2) {
-        all.style.display = "none";
-        snack.style.display = "none";
-        meal.style.display = "grid";
-    }
-}
-
+// function chnGal(a) {
+//     let btns = document.getElementsByClassName("button");
+//     console.log(btns);
+//     for (let index = 0; index < btns.length; index++) {
+//         btns[index].className = btns[index].className.replace(' gal-btn-active', '');
+//     }
+//     btns[a].className += ' gal-btn-active';
+//     if (a === 0) {
+//         all.style.display = "grid";
+//         snack.style.display = "none";
+//         meal.style.display = "none";
+//     } else if (a === 1) {
+//         all.style.display = "none";
+//         snack.style.display = "grid";
+//         meal.style.display = "none";
+//     } else if (a === 2) {
+//         all.style.display = "none";
+//         snack.style.display = "none";
+//         meal.style.display = "grid";
+//     }
+// }
+/* <a data-fslightbox="gallery" href="${products[ran].image}"></a> */
+{/* <a data-fslightbox="gallery" href="${item.image}"></a> */}
 let http = new XMLHttpRequest();
 http.open('get', './json/galleryAll.json', true);
 http.send();
@@ -188,13 +189,11 @@ http.onload = function () {
     let ran = Math.floor((Math.random() * 12) + 2);
     let divNo = 'div'+ran;
     output += `<div class="div1">
-
-    <a data-fslightbox="gallery" href="${products[ran].image}">
       <img src="${products[ran].image}" alt="" class="img-fluid" loading=" lazy">
       <div class="action">
       ${products[ran].dish}
       </div>
-      </a>
+      
     
   </div>`;
 
@@ -207,12 +206,11 @@ http.onload = function () {
         }
       output += `<div class="${item.div}">
 
-      <a data-fslightbox="gallery" href="${item.image}">
+      
         <img src="${item.image}" alt="" class="img-fluid" loading=" lazy">
         <div class="action">
         ${item.dish}
         </div>
-        </a>
       
     </div>`;
     }

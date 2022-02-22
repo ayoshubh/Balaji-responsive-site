@@ -20,6 +20,10 @@ html {
 }
 
 /* About CSS */
+#about-us{
+  position: relative;
+  top: -7rem;
+}
 #about-pretitle {
   font-family: var(--perFontFam);
   font-size: var(--perFontSize);
@@ -944,6 +948,9 @@ div[class^='div'] {
 /* Order Now */
 
 #orderNow {
+  position: relative;
+  top: -10rem;
+  right:1.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -966,8 +973,8 @@ div[class^='div'] {
 }
 
 .order-container {
-  position: relative;
-  top: -85px;
+  /* position: relative;
+  top: -85px; */
   z-index: 10;
   display: flex;
 }
@@ -1032,6 +1039,7 @@ div[class^='div'] {
   #orderNow {
     display: flex;
     flex-direction: column;
+    right: 0;
   }
 
   #phone {
