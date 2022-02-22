@@ -110,7 +110,10 @@ html {
   background-color: #272727;
   color: white;
   text-align: center;
+  position: relative;
+  top: -7rem;
 }
+
 
 #recipe-pretext {
   font-size: var(--perFontSize);
@@ -167,7 +170,7 @@ html {
 .mob-rec-name {
   font-size: 2.6rem;
   font-weight: bold;
-  margin-top: 1.3rem;
+  margin-top: 3.3rem;
   margin-bottom: 0.7rem;
   display: none;
 }
@@ -782,20 +785,24 @@ iframe {
 
 }
 
-#header h5 {
+#gallery{
+  position: relative;
+  top: -3rem;
+}
+#gallery h5 {
   text-align: center;
   font-family: var(--perFontFam);
   font-size: var(--perFontSize);
 }
 
-#header h5 .first-letter {
+#gallery h5 .first-letter {
   font-size: 4.5rem;
   font-weight: 300;
 }
 
-#header h1 {
+#gallery h1 {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 2rem;
   font-weight: 700;
   text-indent: 20px;
   letter-spacing: 1.5px;

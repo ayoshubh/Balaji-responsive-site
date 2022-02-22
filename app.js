@@ -204,9 +204,9 @@ http.onload = function () {
         if(item.div == divNo){
             continue;
         }
-      output += `<div class="${item.div}">
+      output += `<div class="${item.div} ">
 
-      
+        
         <img src="${item.image}" alt="" class="img-fluid" loading=" lazy">
         <div class="action">
         ${item.dish}
