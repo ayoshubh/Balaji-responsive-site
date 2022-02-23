@@ -8,7 +8,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-221273381-1');
     </script>
 
@@ -16,10 +15,22 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Balaji Restaurant Webpage" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="./img/ogImg.png" />
-    <meta property="og:url" content="https://new-balaji-restaurant.netlify.app/" />
+    <meta name="description" content="">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://new-balaji-restaurant.netlify.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Balaji Restaurant Webpage">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://new-balaji-restaurant.netlify.app./img/ogImg.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="new-balaji-restaurant.netlify.app">
+    <meta property="twitter:url" content="https://new-balaji-restaurant.netlify.app/">
+    <meta name="twitter:title" content="Balaji Restaurant Webpage">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://new-balaji-restaurant.netlify.app./img/ogImg.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
@@ -50,7 +61,7 @@
                 <div id="imgContainer"><img src="img/navImg.png" alt="" class="img-fluid" loading="lazy"></div>
             </li>
             <li class="nav-item  px-2">
-                <a class="nav-link text-white" href="#header">GALLERY</a>
+                <a class="nav-link text-white" href="#Gallery">GALLERY</a>
             </li>
             <li class="nav-item  px-2">
                 <a class="nav-link text-white" href="#contact">CONTACT US</a>
@@ -111,7 +122,7 @@
             </div>
             <div id="strip2" class="d-flex flex-column justify-content-end align-items-center text-white px-4">
                 <span class="lead text-white">Call us at</span>
-                <a id="phone" href=" tel:+91 9727779511"><span id="txt"><strong>+91 97277 79511</strong></span></a>
+                <a id="phone" href="tel:+919727779511"><span id="txt"><strong>+91 97277 79511</strong></span></a>
 
                 <div class="or  px-1">or</div>
 
@@ -200,19 +211,17 @@
     </section>
 
     <!-- Gallery -->
-    <div id="header" class="container d-flex flex-column justify-content-center mt-5">
-        <div class="">
-            <h5><span class="first-letter">O</span>ur Pics</h5>
+    <div id="Gallery" class="container d-flex flex-column justify-content-center mt-5">
+        <div>
+            <h2><span class="first-letter">O</span>ur Pics</h2>
         </div>
-        <div class="">
-            <h1>Our Gallery</h1>
+        <div>
+            <h3>Our Gallery</h3>
         </div>
     </div>
 
     <section id="gallery-all" class="container gal marb">
         <!-- Data coming through Json -->
-            </a>
-        </div>
     </section>
 
     <!-- Timing Section -->
@@ -237,7 +246,7 @@
 
     <!-- Comment Section -->
     <section id="testi-sec" style="height: auto; position: relative;">
-        <h1>Testimonials</h1>
+        <h2>Testimonials</h2>
         <div id="comments">
             <div class="owl-carousel owl-theme" id="testimonial">
                 <!-- Code through json -->
@@ -253,7 +262,7 @@
         <div class="row" style="position: relative; ">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1845.6234034107329!2d73.14471257327146!3d22.306503804512506!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x48a5c377232f95e9!2sBalaji%20Restaurant!5e0!3m2!1sen!2sin!4v1645078565873!5m2!1sen!2sin"
-                width="600" height="450" allowfullscreen="" loading=" lazy">
+                width="600" height="450" allowfullscreen="" loading="lazy">
             </iframe>
             <div class="container justify-content-center" id="contact-box">
                 <div class="row justify-content-center">
@@ -275,7 +284,7 @@
                         <img src="./img/call.png" alt="" style="max-width: 15px;">
                     </div>
                     <div class="col-auto col-md-auto">
-                        <a id="phone" href="tel:+91 9727779511" style="text-decoration: inherit; color: inherit;">+91
+                        <a id="phonefooter" href="tel:+919727779511" style="text-decoration: inherit; color: inherit;">+91
                             97277 79511</a>
                     </div>
                 </div>
@@ -315,7 +324,7 @@
                     <a class="nav-link text-black txt" href="#about-us"><small>ABOUT US</small></a>
                 </li>
                 <li class="nav-item  px-2">
-                    <a class="nav-link text-black txt" href="#header"><small>GALLERY</small></a>
+                    <a class="nav-link text-black txt" href="#Gallery"><small>GALLERY</small></a>
                 </li>
                 <li class="nav-item  px-2">
                     <a class="nav-link text-black txt" href="#contact"><small>CONTACT US</small></a>
