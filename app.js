@@ -5,8 +5,6 @@ $(document).ready(function () {
         loop: true,
         items: 1,
         dots: true,
-        
-        
         autoplay: true,
         autoplayTimeout: 4000,
         responsive:{
@@ -14,7 +12,7 @@ $(document).ready(function () {
                 items:1,
                 margin: -20,
             },
-            768:{
+            769:{
                 items:3,
                 margin:-320,
             }
@@ -50,7 +48,7 @@ function testimonial() {
         }).then(jsondata => {
             let Arr = jsondata;
             Arr.forEach(i => {
-                let ih = '<div class="testi-card"><img src="./img/Quotas.png"><p>' + i.com + '</p><div class="testi-img" style="background-image: url(' + i.loc + ');"></div><div class="testi-au">' + i.name + '</div><div class="testi-star">';
+                let ih = '<div class="testi-card"><img src="./img/Quotas.png" alt="Quotas Image"><p>' + i.com + '</p><div class="testi-img" style="background-image: url(' + i.loc + ');"></div><div class="testi-au">' + i.name + '</div><div class="testi-star">';
                 for (let index = 1; index <= i.rate; index++) {
                     ih += '<i class="fa-solid fa-star active"></i>'
                 }
@@ -60,9 +58,6 @@ function testimonial() {
                 ih += '</div></div>';
                 $('#testimonial').owlCarousel('add', ih).owlCarousel('update');
             });
-            // let ih = '<div class="testi-card"><img src="./img/Quotas.png"><p>Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendumNulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum</p><div class="testi-img t1"></div><div class="testi-au">Joye</div><div class="testi-star"><i class="fa-solid fa-star active"></i><i class="fa-solid fa-star active"></i><i class="fa-solid fa-star active"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>' 
-            // console.log(ih);
-            //
         })
 }
 testimonial();
@@ -80,36 +75,6 @@ function recMob() {
 }
 recMob();
 
-// $('#mob-rec').owlCarousel('changed',updateZ());
-
-// function updateZ() {
-//     console.log('Hello');
-// }
-
-function recLarge() {
-    let x = false;
-    fetch("./json/recipe.json")
-        .then(response => {
-            return (response.json());
-        }).then(jsondata => {
-            let ele = document.getElementById('rec-slide-list');
-            jsondata.forEach(i => {
-                const tempele = document.createElement('li');
-                tempele.innerHTML = '<div class="slide-cont"><div class="slide-img"><img src="'+i.loc+'" alt="Recipe '+i.id+'"></div><div class="slide-title">'+i.name+'</div><div class="slide-desc">'+i.desc+'</div></div>';
-                console.log(tempele);
-                ele.appendChild(tempele);
-            });
-            x = true;
-            return x;
-        }).then(m=>{
-            if(m){
-                $('#large-rec').hiSlide({});
-            }else{
-                console.log('This is Error msg '+ m);
-            }
-        })       
-}
-recLarge();
 
 
 let i = 0;
@@ -177,95 +142,50 @@ function chnGal(a) {
     }
 }
 
-let http = new XMLHttpRequest();
-http.open('get', './json/galleryAll.json', true);
-http.send();
-http.onload = function () {
-  if (this.readyState == 4 && this.status == 200) {
-    let products = JSON.parse(this.responseText);
-    let output = "";
-
-    let ran = Math.floor((Math.random() * 12) + 2);
-    let divNo = 'div'+ran;
-    output += `<div class="div1">
-
-    <a data-fslightbox="gallery" href="${products[ran].image}">
-      <img src="${products[ran].image}" alt="" class="img-fluid" loading=" lazy">
-      <div class="action">
-      ${products[ran].dish}
-      </div>
-      </a>
-    
-  </div>`;
-
-    for (let item of products) {
-        if(item.div == 'div1'){
-            continue;
-        }
-        if(item.div == divNo){
-            continue;
-        }
-      output += `<div class="${item.div}">
-
-      <a data-fslightbox="gallery" href="${item.image}">
-        <img src="${item.image}" alt="" class="img-fluid" loading=" lazy">
-        <div class="action">
-        ${item.dish}
-        </div>
-        </a>
-      
-    </div>`;
-    }
-    document.querySelector("#gallery-all").innerHTML = output 
-  };
-
+function gallery() {
+    fetch("./json/galleryAll.json")
+        .then(response => {
+            return (response.json());
+        }).then(jsondata => {
+            let products = jsondata;
+            let output = "";
+            let ran = Math.floor((Math.random() * 12) + 2);
+            let divNo = 'div'+ran;
+            output += `<div class="div1">
+                <a data-fslightbox="gallery" href="${products[ran].image}" id="galLink">
+                <img src="${products[ran].image}" alt="" class="img-fluid" loading="lazy" id="galImg">
+                <div class="action" id="galAct">
+                ${products[ran].dish}
+                </div>
+                </a>
+            </div>`;
+            for (let item of products) {
+                if(item.div == 'div1'){
+                    continue;
+                }
+                if(item.div == divNo){
+                    continue;
+                }
+            output += `<div class="${item.div}">
+                        <a data-fslightbox="gallery" href="${item.image}">
+                        <img src="${item.image}" alt="" class="img-fluid" loading="lazy">
+                        <div class="action">
+                        ${item.dish}
+                        </div>
+                        </a>
+                    </div>`;
+            }
+            console.log(output);
+            document.querySelector("#gallery-all").innerHTML = output;
+            return true
+        }).then(m=>{
+            if(m){
+                var s = document.createElement( 'script' );
+                s.setAttribute( 'src', './js/fslightbox.js' );
+                document.body.appendChild( s );
+            }else{
+                console.log('Error !!!!');
+            }
+        })
 }
-
-// let http2 = new XMLHttpRequest();
-// http2.open('get', './json/gallerySnack.json', true);
-// http2.send();
-// http2.onload = function () {
-//   if (this.readyState == 4 && this.status == 200) {
-//     let products = JSON.parse(this.responseText);
-//     // let outputSnack = "";
-//     let output = "";
-//     for (let item of products) {
-//       output += `<div class="${item.div}">
-
-//       <a data-fslightbox="gallery" href="${item.image}">
-//         <img src="${item.image}" alt="" class="img-fluid" loading=" lazy">
-//         <div class="action">
-//         ${item.dish}
-//         </div>
-//         </a>
-      
-//     </div>`;
-//     }
-//     document.querySelector("#gallery-snack").innerHTML = output 
-//   };
-
-// }
-
-// let http3 = new XMLHttpRequest();
-// http3.open('get', './json/galleryMeal.json', true);
-// http3.send();
-// http3.onload = function () {
-//   if (this.readyState == 4 && this.status == 200) {
-//     let products = JSON.parse(this.responseText);
-//     let output = "";
-//     for (let item of products) {
-//       output += `<div class="${item.div}">
-
-//       <a data-fslightbox="gallery" href="${item.image}">
-//         <img src="${item.image}" alt="" class="img-fluid" loading=" lazy">
-//         <div class="action">
-//         ${item.dish}
-//         </div>
-//         </a>
-      
-//     </div>`;
-//     }
-//     document.querySelector("#gallery-meal").innerHTML = output 
-//   };
-
-// }
+gallery();

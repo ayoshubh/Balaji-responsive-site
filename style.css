@@ -20,13 +20,16 @@ html {
 }
 
 /* About CSS */
+#about-us{
+  margin-top: -4rem;
+}
 #about-pretitle {
   font-family: var(--perFontFam);
   font-size: var(--perFontSize);
 }
 
 #about-title {
-  margin-top: -30px;
+  margin-top: -20px;
   font-size: 4rem;
   margin-bottom: 50px;
 }
@@ -1052,6 +1055,7 @@ div[class^='div'] {
     background-color: #ff3737;
     color: white;
     border-bottom: 4px solid #edbb0c;
+    padding-bottom: 4rem;
   }
 
   #strip2 span {
@@ -1077,5 +1081,6 @@ div[class^='div'] {
     flex-direction: column;
     background-color: #ff3737;
     color: white;
+    padding-top: 3rem;
   }
 }
