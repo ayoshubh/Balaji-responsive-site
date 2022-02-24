@@ -89,59 +89,6 @@ function showNav() {
 }
 
 
-let slideIndex = 1;
-showSlides(slideIndex);
-
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        slides[i].className = slides[i].className.replace(" fade", "");
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    slides[slideIndex - 1].className += " fade";
-    dots[slideIndex - 1].className += " active";
-}
-
-
-const all = document.getElementById('gallery-all');
-const snack = document.getElementById('gallery-snack');
-const meal = document.getElementById('gallery-meal');
-
-function chnGal(a) {
-    let btns = document.getElementsByClassName("button");
-    console.log(btns);
-    for (let index = 0; index < btns.length; index++) {
-        btns[index].className = btns[index].className.replace(' gal-btn-active', '');
-    }
-    btns[a].className += ' gal-btn-active';
-    if (a === 0) {
-        all.style.display = "grid";
-        snack.style.display = "none";
-        meal.style.display = "none";
-    } else if (a === 1) {
-        all.style.display = "none";
-        snack.style.display = "grid";
-        meal.style.display = "none";
-    } else if (a === 2) {
-        all.style.display = "none";
-        snack.style.display = "none";
-        meal.style.display = "grid";
-    }
-}
-
 function gallery() {
     fetch("./json/galleryAll.json")
         .then(response => {
@@ -153,7 +100,7 @@ function gallery() {
             let divNo = 'div'+ran;
             output += `<div class="div1">
                 <a data-fslightbox="gallery" href="${products[ran].image}" id="galLink">
-                <img src="${products[ran].image}" alt="" class="img-fluid" loading="lazy" id="galImg">
+                <img src="${products[ran].image}" alt="${products[ran].dish}" class="img-fluid" loading="lazy" id="galImg">
                 <div class="action" id="galAct">
                 ${products[ran].dish}
                 </div>
@@ -168,7 +115,7 @@ function gallery() {
                 }
             output += `<div class="${item.div}">
                         <a data-fslightbox="gallery" href="${item.image}">
-                        <img src="${item.image}" alt="" class="img-fluid" loading="lazy">
+                        <img src="${item.image}" alt="${item.dish}" class="img-fluid" loading="lazy">
                         <div class="action">
                         ${item.dish}
                         </div>
