@@ -653,8 +653,8 @@ iframe {
   background-size: cover;
   padding: 0;
 }
-.bannerIndicatorBlock{
-  bottom: 7.5rem !important;
+.carousel-indicators{
+  bottom: 9rem !important;
 }
 .bannerIndicator {
   width: 15px !important;
