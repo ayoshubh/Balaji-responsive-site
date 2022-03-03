@@ -68,7 +68,7 @@ function recMob() {
             return (response.json());
         }).then(jsondata => {
             jsondata.forEach(i => {
-                let ih = '<div><div class="mob-rec-img"><img src="' + i.loc + '" alt="Recipe ' + i.id + '"></div><div class="mob-rec-name">' + i.name + '</div><div class="mob-rec-desc">' + i.desc + '</div></div>';
+                let ih = `<div><div class="mob-rec-img"><img src="${i.loc}" alt="Recipe ${i.id}"></div><div class="mob-rec-name">${i.name}</div><div class="mob-rec-desc">${i.desc}</div></div>`;
                 $('#mob-rec').owlCarousel('add', ih).owlCarousel('update');
             });
         })
@@ -110,7 +110,7 @@ function gallery() {
                 if(item.div == 'div1'){
                     continue;
                 }
-                if(item.div == divNo){
+                if(item.div == 'div'+divNo){
                     continue;
                 }
             output += `<div class="${item.div}">

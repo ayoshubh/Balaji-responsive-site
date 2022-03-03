@@ -1,66 +1,61 @@
 [
   {
     "div":"div1",
-    "image": "./img/gallery2.png",
-    "dish": "Masala Dosa"
+    "image": "/img/Butter Naan.png",
+    "dish": "Butter Naan"
   },
   {
     "div":"div2",
-    "image": "/img/gallery1.png",
-    "dish": "Masala Dosa"
+    "image": "img/French Fires.png",
+    "dish": "French Fires"
   },
   {
     "div":"div3",
-    "image": "/img/gallery3.png",
-    "dish": "Roti Tandoori"
+    "image": "/img/Hara Bhara Kebab.png",
+    "dish": "Hara Bhara Kebab"
   },
   {
     "div":"div4",
-    "image": "/img/gallery4.png",
-    "dish": "Burger"
+    "image": "/img/Jeera Rice.png",
+    "dish": "Jeera Rice"
   },
   {
     "div":"div5",
-    "image": "/img/gallery4.png",
-    "dish": "Burger"
+    "image": "/img/Kaju Masala.png",
+    "dish": "Kaju Masala"
   },{
     "div":"div6",
-    "image": "/img/gallery5.png",
-    "dish": "Paneer"
+    "image": "/img/Dal Makhani.png",
+    "dish": "Dal Makhani"
   },
   {
     "div":"div7",
-    "image": "/img/gallery6.png",
-    "dish": "Tadka"
+    "image": "/img/Paneer Butter Masala.png",
+    "dish": "Paneer Butter Masala"
   },
   {
     "div":"div8",
-    "image": "/img/gallery6.png",
-    "dish": "Tadka"
+    "image": "/img/Butter Naan.png",
+    "dish": "Butter Naan"
   },
   {
     "div":"div9",
-    "image": "/img/gallery6.png",
-    "dish": "Tadka"
+    "image": "/img/Paneer Chilly Dry.png",
+    "dish": "Paneer Chilly Dry"
   },
   {
     "div":"div10",
-    "image": "/img/gallery6.png",
-    "dish": "Tadka"
+    "image": "/img/Tomato Soup.png",
+    "dish": "Tomato Soup"
   },
   {
     "div":"div11",
-    "image": "/img/gallery6.png",
-    "dish": "Tadka"
+    "image": "/img/Peppy Paneer PIZZA.png",
+    "dish": "Peppy Paneer Pizza"
   },
   {
     "div":"div12",
-    "image": "/img/gallery6.png",
-    "dish": "Tadka"
-  },
-  {
-    "div":"div13",
-    "image": "/img/gallery3.png",
-    "dish": "Roti Tandoori"
+    "image": "/img/Manchow Soup.png",
+    "dish": "Manchow Soup"
   }
 ]
