@@ -1,60 +1,60 @@
 [
   {
-    "div":"div1",
+    "div":"div2",
     "image": "/img/Butter Naan.png",
     "dish": "Butter Naan"
   },
   {
-    "div":"div2",
+    "div":"div3",
     "image": "img/French Fires.png",
     "dish": "French Fires"
   },
   {
-    "div":"div3",
+    "div":"div4",
     "image": "/img/Hara Bhara Kebab.png",
     "dish": "Hara Bhara Kebab"
   },
   {
-    "div":"div4",
+    "div":"div5",
     "image": "/img/Jeera Rice.png",
     "dish": "Jeera Rice"
   },
   {
-    "div":"div5",
+    "div":"div6",
     "image": "/img/Kaju Masala.png",
     "dish": "Kaju Masala"
   },{
-    "div":"div6",
+    "div":"div7",
     "image": "/img/Dal Makhani.png",
     "dish": "Dal Makhani"
   },
   {
-    "div":"div7",
+    "div":"div8",
     "image": "/img/Paneer Butter Masala.png",
     "dish": "Paneer Butter Masala"
   },
   {
-    "div":"div8",
+    "div":"div9",
     "image": "/img/Butter Naan.png",
     "dish": "Butter Naan"
   },
   {
-    "div":"div9",
+    "div":"div10",
     "image": "/img/Paneer Chilly Dry.png",
     "dish": "Paneer Chilly Dry"
   },
   {
-    "div":"div10",
+    "div":"div11",
     "image": "/img/Tomato Soup.png",
     "dish": "Tomato Soup"
   },
   {
-    "div":"div11",
+    "div":"div12",
     "image": "/img/Peppy Paneer PIZZA.png",
     "dish": "Peppy Paneer Pizza"
   },
   {
-    "div":"div12",
+    "div":"div13",
     "image": "/img/Manchow Soup.png",
     "dish": "Manchow Soup"
   }

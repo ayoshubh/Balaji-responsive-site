@@ -107,10 +107,9 @@ function gallery() {
                 </a>
             </div>`;
             for (let item of products) {
-                if(item.div == 'div1'){
-                    continue;
-                }
-                if(item.div == 'div'+divNo){
+                console.log(item.div);
+                if(item.div == divNo){
+                    console.log(divNo);
                     continue;
                 }
             output += `<div class="${item.div}">
@@ -122,7 +121,6 @@ function gallery() {
                         </a>
                     </div>`;
             }
-            console.log(output);
             document.querySelector("#gallery-all").innerHTML = output;
             return true
         }).then(m=>{
