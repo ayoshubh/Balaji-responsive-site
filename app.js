@@ -13,8 +13,8 @@ $(document).ready(function () {
                 margin: -20,
             },
             769:{
-                items:3,
-                margin:-320,
+                items:2,
+                margin:-510,
             }
         }
     })
@@ -68,7 +68,8 @@ function recMob() {
             return (response.json());
         }).then(jsondata => {
             jsondata.forEach(i => {
-                let ih = `<div><div class="mob-rec-img"><img src="${i.loc}" alt="Recipe ${i.id}"></div><div class="mob-rec-name">${i.name}</div><div class="mob-rec-desc">${i.desc}</div></div>`;
+                let ih = `<div><div class="mob-rec-img"><img src="${i.loc}" alt="Recipe ${i.id}"></div>
+                <div class="mob-rec-name">${i.name}</div><div class="mob-rec-desc">${i.desc}</div></div>`;
                 $('#mob-rec').owlCarousel('add', ih).owlCarousel('update');
             });
         })

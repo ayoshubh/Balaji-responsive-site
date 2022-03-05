@@ -163,8 +163,9 @@ html {
 
 .mob-rec-img img {
   margin: auto;
-  padding: 1rem;
   width: 20.5rem !important;
+  border: 10px solid white;
+  border-radius: 50%;
 }
 
 .mob-rec-name {
