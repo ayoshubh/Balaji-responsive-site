@@ -1,61 +1,61 @@
 [
   {
     "div":"div2",
-    "image": "/img/Butter Naan.png",
+    "image": "/img/Butter Naan.webp",
     "dish": "Butter Naan"
   },
   {
     "div":"div3",
-    "image": "img/French Fires.png",
+    "image": "img/French Fires.webp",
     "dish": "French Fires"
   },
   {
     "div":"div4",
-    "image": "/img/Hara Bhara Kebab.png",
+    "image": "/img/Hara Bhara Kebab.webp",
     "dish": "Hara Bhara Kebab"
   },
   {
     "div":"div5",
-    "image": "/img/Jeera Rice.png",
+    "image": "/img/Jeera Rice.webp",
     "dish": "Jeera Rice"
   },
   {
     "div":"div6",
-    "image": "/img/Kaju Masala.png",
+    "image": "/img/Kaju Masala.webp",
     "dish": "Kaju Masala"
   },{
     "div":"div7",
-    "image": "/img/Dal Makhani.png",
+    "image": "/img/Dal Makhani.webp",
     "dish": "Dal Makhani"
   },
   {
     "div":"div8",
-    "image": "/img/Paneer Butter Masala.png",
+    "image": "/img/Paneer Butter Masala.webp",
     "dish": "Paneer Butter Masala"
   },
   {
     "div":"div9",
-    "image": "/img/Butter Naan.png",
+    "image": "/img/Butter Naan.webp",
     "dish": "Butter Naan"
   },
   {
     "div":"div10",
-    "image": "/img/Paneer Chilly Dry.png",
+    "image": "/img/Paneer Chilly Dry.webp",
     "dish": "Paneer Chilly Dry"
   },
   {
     "div":"div11",
-    "image": "/img/Tomato Soup.png",
+    "image": "/img/Tomato Soup.webp",
     "dish": "Tomato Soup"
   },
   {
     "div":"div12",
-    "image": "/img/Peppy Paneer PIZZA.png",
+    "image": "/img/Peppy Paneer PIZZA.webp",
     "dish": "Peppy Paneer Pizza"
   },
   {
     "div":"div13",
-    "image": "/img/Manchow Soup.png",
+    "image": "/img/Manchow Soup.webp",
     "dish": "Manchow Soup"
   }
 ]

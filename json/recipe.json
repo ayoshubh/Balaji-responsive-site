@@ -1,31 +1,31 @@
 [
     {
         "id":1,
-        "loc":"img/paneer jwalamukhi.png",
+        "loc":"img/paneer jwalamukhi.webp",
         "name":"Paneer Jwalamukhi",
         "desc":"1Nulla id tortor nec lectus feugiat ultricies. Duis sit amet augue vitae dui bibendum"
     },
     {
         "id":2,
-        "loc":"img/Cheese Angara 2.png",
+        "loc":"img/Cheese Angara 2.webp",
         "name":"Cheese Angara",
         "desc":"Cheese Angara is a smokey cheese Indian vegetarian gravy recipe served with naan or roti."
     },
     {
         "id":3,
-        "loc":"img/paneer kumkum.png",
+        "loc":"img/paneer kumkum.webp",
         "name":"Paneer Kumkum",
         "desc":"A kumkum color garvy with combination of diced and crumbled panner along with corn. Very simple, yet very tasty"
     },
     {
         "id":4,
-        "loc":"img/Veg Handi.png",
+        "loc":"img/Veg Handi.webp",
         "name":"Veg Handi",
         "desc":"Veg Handi is a mixed vegetable curry recipe, which is prepared with onion, tomato, ginger, garlic and cashew paste in a traditional handi"
     },
     {
         "id":5,
-        "loc":"img/Veg-jaipuri.png",
+        "loc":"img/Veg-jaipuri.webp",
         "name":"Veg Jaipuri",
         "desc":"Mix veg jaipuri is a delicious mixed vegetable curry made with mixed vegetable, paneer cubes in a tomato-onion based gravy which is topped with roasted urad dal papad"
     }
